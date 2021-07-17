@@ -67,3 +67,6 @@ Team Leader with all team members
 Every day
 ##### How will you communicate that it’s time to merge?
 Every day when an new feature is completed
+
+# WireFrame
+![WireFrame](https://i.ibb.co/D4hs75k/wirefram-1.png)
