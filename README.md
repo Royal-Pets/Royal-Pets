@@ -70,3 +70,6 @@ Every day when an new feature is completed
 
 # WireFrame
 ![WireFrame](https://i.ibb.co/D4hs75k/wirefram-1.png)
+
+# Domain Model
+![Domain Model](https://i.ibb.co/mBR3V2S/Untitled-Diagram.png)
