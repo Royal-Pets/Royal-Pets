@@ -1,14 +1,29 @@
+
+import React from 'react'
+// import Header from './component/Header'
+import Main from './component/Main'
+// import Footer from './component/Footer'
 import './App.css';
 import Home from './Home'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-function App() {
-  return (
-    <div className="App">
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+
+        {/* <Header /> */}
+ <div className="App">
       <Home/>
     </div>
-  );
-}
+        <Main />
 
-export default App;
+        {/* <Footer /> */}
+      </div>
+    )
+  }
+
+
+
+export default App
