@@ -2,7 +2,7 @@ import React from 'react'
 import LoginButton from './components/Login'
 import LogoutButton from './components/logout'
 import Profile from './components/profile';
- class App extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props)
 
@@ -41,11 +41,9 @@ import Profile from './components/profile';
   render() {
     return (
       <div>
-      <LoginButton/>
-      <LogoutButton/>
-      <div style={{marginRight:'10%',marginLeft:'10%'}} >
-        <Profile showrequest={this.showrequest} showsomthing={this.showsomthing} showanotherpage={this.showanotherpage} />
-
+        <LoginButton />
+        <LogoutButton />
+        <Profile showrequest={this.showrequest} showsomthing={this.showsomthing} showanotherpage={this.showanotherpage}/>
         {
           this.state.showrequest &&   ///    if(  true && true   )
           <somthing />  //   true
@@ -63,8 +61,7 @@ import Profile from './components/profile';
         }
 
       </div>
-      </div>
-      
+
     )
   }
 }
