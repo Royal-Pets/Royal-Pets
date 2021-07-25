@@ -1,0 +1,99 @@
+[
+    {
+      "productName": "Wet food",
+      "itsFor": "Cats",
+      "Price": "15$",
+      "image": "https://i.pinimg.com/564x/7c/f6/30/7cf630ceb72dd3428025082f8cad5309.jpg"
+    },
+
+    {
+       
+        "productName": "kitty bits",
+        "itsFor": "Cats",
+        "Price": "25$",
+        "image": "https://i.pinimg.com/564x/c5/d2/f7/c5d2f725bb655604c4ded2e4df8c5109.jpg"
+      }
+    ,
+    {
+      
+        "productName": "Dry food",
+        "itsFor": "Cats",
+        "Price": "20$",
+        "image": "https://i.pinimg.com/564x/8b/52/ed/8b52ed01240230da331424af94bf74be.jpg"
+      }
+    ,
+    {
+    
+        "productName": "Dry food",
+        "itsFor": "Dogs",
+        "Price": "20$",
+        "image": "https://i.pinimg.com/564x/50/d1/f8/50d1f8bd10460cfcdc054e9404f1411c.jpg"
+      }
+    ,
+    {
+     
+        "productName": "chiken pits",
+        "itsFor": "Dogs",
+        "Price": "30$",
+        "image": "https://i.pinimg.com/564x/de/a9/65/dea9652002d2d8b6731e10b156dd9fc1.jpg"
+      }
+    ,
+    {
+        "productName": "Dog food salmoon",
+        "itsFor": "Dogs",
+        "Price": "45$",
+        "image": "https://i.pinimg.com/564x/cc/12/03/cc12036a2522f520ab5decdd72af1bd6.jpg"
+    
+    },
+
+    {
+     
+        "productName": "Squeeze ",
+        "itsFor": "Dogs and Cats",
+        "Price": "22$",
+        "image": "https://i.pinimg.com/564x/6a/d6/9e/6ad69e0cf669c8584a0bf9cfdd8826a9.jpg"
+      
+    },
+
+    {
+      
+        "productName": "Baseball ",
+        "itsFor": "Dogs and Cats",
+        "Price": "35$",
+        "image": " https://i.pinimg.com/564x/45/b9/dd/45b9ddd3bcf4e76ac788f27f8f44ef79.jpg"
+      }
+    ,
+    {
+      
+        "productName": "Fish squeeze ",
+        "itsFor": "Dogs and Cats",
+        "Price": "37$",
+        "image": "https://i.pinimg.com/564x/d1/ad/5c/d1ad5cc83d6b056140b9c17ebf2aa43f.jpg"
+      
+    },
+
+    {
+        "productName": "Pretty bowl ",
+        "itsFor": "Dogs and Cats",
+        "Price": "25$",
+        "image": "https://i.pinimg.com/564x/e2/7c/fa/e27cfa2b9d3dda5fb84f744156156a9c.jpg"
+      }
+    ,
+
+    {
+        "productName": "Pretty bowl ",
+        "itsFor": "Dogs and Cats",
+        "Price": "55$",
+        "image": "https://i.pinimg.com/564x/7a/b2/3a/7ab23a00cc561f9af26f439c7b26bcb4.jpg"
+      
+    },
+    {
+      
+        "productName": " Cactus bowl ",
+        "itsFor": "Dogs and Cats",
+        "Price": "45$",
+        "image": "https://i.pinimg.com/564x/c0/bf/41/c0bf4189ff53c51d07d43e8b5887a126.jpg"
+      }
+    
+  ]
+
