@@ -9,6 +9,7 @@ import imgCard from './Images/cardimage1.jpg';
 import imgCard2 from './Images/cardimage2.jpg';
 import imgCard3 from './Images/cardimage3.jpg';
 import imgCard4 from './Images/cardimage4.jpg';
+import imgCard5 from './Images/41217047470_45aa7a4651_k.jpg';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons'
@@ -25,7 +26,7 @@ class Home extends Component {
     handleModal() {
         this.setState({ show: !this.state.show })
     }
-      
+
 
     render() {
         return (
@@ -68,13 +69,88 @@ class Home extends Component {
                     </Carousel>
                 </Row>
 
+
                 <Row>
                     <div className="home-top-section">
-                        <h1 className="home-title">We Have Everything Your Pet Needs.</h1>
-                        <p>hi</p>
+                        <h1 className="home-title">Our newest pets, they need a sweet home</h1>
                     </div>
                 </Row>
                 <Row>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Body>
+                            <Card.Img variant="top" src={imgCard} height='180' />
+                            <Card.Title>Timmy</Card.Title>
+                            <Card.Text>
+                                Our newest cat, Timmy! in need for a....
+                            </Card.Text>
+                            <Button variant="primary">Our adoption page</Button>
+                        </Card.Body>
+                    </Card>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Body>
+                            <Card.Img variant="top" src={imgCard} height='180' />
+                            <Card.Title>Timmy</Card.Title>
+                            <Card.Text>
+                                Our newest cat, Timmy! in need for a....
+                            </Card.Text>
+                            <Button variant="primary">Our adoption page</Button>
+                        </Card.Body>
+                    </Card>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Body>
+                            <Card.Img variant="top" src={imgCard} height='180' />
+                            <Card.Title>Timmy</Card.Title>
+                            <Card.Text>
+                                Our newest cat, Timmy! in need for a....
+                            </Card.Text>
+                            <Button variant="primary">Our adoption page</Button>
+                        </Card.Body>
+                    </Card>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Body>
+                            <Card.Img variant="top" src={imgCard} height='180' />
+                            <Card.Title>Timmy</Card.Title>
+                            <Card.Text>
+                                Our newest cat, Timmy! in need for a....
+                            </Card.Text>
+                            <Button variant="primary">Our adoption page</Button>
+                        </Card.Body>
+                    </Card>
+                </Row>
+
+                <Row>
+                    <img src={imgCard5} />
+                    <h2>No animals left in need</h2>
+                    <p>Since our launch in 1986, we transfer in dogs and cats from public shelters where they are in danger of being euthanized due to space or financial limitations. We then provide them with the best possible care and enrichment until we can help them find their forever homes.</p>
+                </Row>
+                <Row>
+                    <img src={img3}/>
+                    <h2>Our Values</h2>
+                    <p>Everything we do at Royal-Pets – from the way we greet you on the phone, to the way we introduce a new service or train a new team member, is underpinned by the following seven core values:
+                        <br></br>
+                        ★ Excellence ★ Care ★ Innovation ★ Professionalism ★ Consistency ★ Enjoyment ★ Value for money ★
+                    </p>
+                    <br></br>
+                    <img src={img3}/>
+                    <h2>Our Mission</h2>
+                    <p>To provide innovative, high-quality, consistent, value-for-money, pet friendly health care that will make your pet want to come back again…and again.</p>
+                    <br></br>
+
+                    <img src={img3}/>
+                    <h2>Our Motto</h2>
+                    <p>…is “Health care from your pet’s point of view.”</p>
+                    <br></br>
+
+                    <img src={img3}/>
+                    <h2>Our Vision</h2>
+                    <p>5 years from now, Pet Universe will be the ultimate professional veterinary practice that combines excellent healthcare delivered in a consistent, innovative, enjoyable, caring and pet-friendly way to create a value-for-money yet profitable and unforgettable service experience from our:
+                        <br></br>
+                        ★ Pet’s Point of View ★ Client’s Point of View ★ Staff’s point of view ★ Platinum Partner’s Point Of View ★ Owner’s Point of View ★
+                    </p>
+                </Row>
+
+                <Row>
+                    <h2>Thats why you choose us</h2>
                     <Card style={{ width: '18rem' }}>
                         <Card.Body>
                             <Card.Img variant="top" src={imgCard} height='180' />
@@ -117,7 +193,11 @@ class Home extends Component {
                         </Card.Body>
                     </Card>
                 </Row>
+
+
+
                 <Row className="home-video-section">
+                    <h2>Inside the mind of animals</h2>
                     <Button style={{ width: '50rem', height: '30rem' }} variant="primary" onClick={() => { this.handleModal() }} >
                         <FontAwesomeIcon icon={faPlay} />
                     </Button>
@@ -127,26 +207,7 @@ class Home extends Component {
                         </Modal.Body>
                     </Modal>
                 </Row>
-                <div>
-                    <h2>Our Values</h2>
-                    <p>Everything we do at Royal-Pets – from the way we greet you on the phone, to the way we introduce a new service or train a new team member, is underpinned by the following seven core values:
-                        <br></br>
-                        ★ Excellence ★ Care ★ Innovation ★ Professionalism ★ Consistency ★ Enjoyment ★ Value for money ★
-                    </p>
-                    <br></br>
-                    <h2>Our Mission</h2>
-                    <p>To provide innovative, high-quality, consistent, value-for-money, pet friendly health care that will make your pet want to come back again…and again.</p>
-                    <br></br>
-                    <h2>Our Motto</h2>
-                    <p>…is “Health care from your pet’s point of view.”</p>
-                    <br></br>
-                    <h2>Our Vision</h2>
-                    <p>5 years from now, Pet Universe will be the ultimate professional veterinary practice that combines excellent healthcare delivered in a consistent, innovative, enjoyable, caring and pet-friendly way to create a value-for-money yet profitable and unforgettable service experience from our:
-                        <br></br>
-                        ★ Pet’s Point of View ★ Client’s Point of View ★ Staff’s point of view ★ Platinum Partner’s Point Of View ★ Owner’s Point of View ★
-                    </p>
 
-                </div>
 
             </Container>
         )
