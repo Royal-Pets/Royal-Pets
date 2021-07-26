@@ -6,10 +6,11 @@ import Main from "../component/Main";
 import Home from "../Home";
 import AboutUs from "./AboutUs";
 import Footer from "./Footer";
-
-// import LoginButton from './components/LoginButton';
-// import LogoutButton from './components/LogoutButton';
-// import { withAuth0 } from '@auth0/auth0-react';
+import AdoptList from "./AdoptList";
+import Profile from "./Profile";
+import { withAuth0 } from "@auth0/auth0-react";
+import LogoutButton from "./LogoutButton";
+import LoginButton from "./LoginButton";
 
 export class Header extends React.Component {
   render() {
@@ -22,8 +23,17 @@ export class Header extends React.Component {
               <Nav className="me-auto">
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/store">Store</Nav.Link>
+                <Nav.Link href="/adopt">Adopt</Nav.Link>
                 <Nav.Link href="/about">About Us</Nav.Link>
+                {this.props.auth0.isAuthenticated ? (
+                  <Nav.Link href="/profile">Profile</Nav.Link>
+                ) : null}
               </Nav>
+              {this.props.auth0.isAuthenticated ? (
+                <LogoutButton />
+              ) : (
+                <LoginButton />
+              )}
             </Container>
           </Navbar>
           {/* A <Switch> looks through its children <Route>s and
@@ -33,8 +43,16 @@ export class Header extends React.Component {
               <AboutUs />
               <Footer />
             </Route>
+            <Route path="/adopt">
+              <AdoptList />
+              <Footer />
+            </Route>
             <Route path="/store">
               <Main />
+              <Footer />
+            </Route>
+            <Route path="/profile">
+              <Profile />
               <Footer />
             </Route>
             <Route path="/">
@@ -45,10 +63,7 @@ export class Header extends React.Component {
         </Router>
       </div>
     );
-    {
-      /* {isAuthenticated ? <LogoutButton/> : <LoginButton/>} */
-    }
   }
 }
 
-export default Header;
+export default withAuth0(Header);

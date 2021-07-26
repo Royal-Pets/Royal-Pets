@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Card, Button, Modal, Form, FloatingLabel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { withAuth0 } from "@auth0/auth0-react";
+
 export class AdoptCard extends Component {
   constructor(props) {
     super(props);
@@ -75,7 +77,11 @@ export class AdoptCard extends Component {
             <Button
               variant="danger"
               onClick={this.handleShow}
-              style={{ display: "block", margin: "0 auto" }}
+              style={{
+                display: "block",
+                margin: "0 auto",
+                padding: "5px 40px",
+              }}
             >
               Contact
             </Button>
@@ -86,4 +92,4 @@ export class AdoptCard extends Component {
   }
 }
 
-export default AdoptCard;
+export default withAuth0(AdoptCard);
