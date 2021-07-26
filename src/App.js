@@ -1,4 +1,3 @@
-import React from 'react'
 import LoginButton from './components/Login'
 import LogoutButton from './components/logout'
 import Profile from './components/profile';
@@ -8,7 +7,11 @@ import Main from './component/Main'
 import './App.css';
 import Home from './Home'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import React, { Component } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header'
+import Footer from './components/Footer';
+import AboutUs from './components/AboutUs';
 
 class App extends React.Component {
   constructor(props) {
@@ -48,7 +51,9 @@ class App extends React.Component {
   render() {
     return (
       <div>
-
+        <Header/>
+        <AboutUs/>
+        <Footer/>
         {/* <Header /> */}
  <div className="App">
       <Home/>
@@ -79,8 +84,8 @@ class App extends React.Component {
       </div>
     )
   }
+}
 
 
 
 export default App
-
