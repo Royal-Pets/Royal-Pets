@@ -50,38 +50,36 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div>
+//       <div>
         <Header/>
-        <AboutUs/>
-        <Footer/>
-        {/* <Header /> */}
- <div className="App">
-      <Home/>
-    </div>
-        <Main />
-        <div>
-        <LoginButton />
-        <LogoutButton />
-        <Profile showrequest={this.showrequest} showsomthing={this.showsomthing} showanotherpage={this.showanotherpage}/>
-        {
-          this.state.showrequest &&   ///    if(  true && true   )
-          <somthing />  //   true
-        }
+//         <AboutUs/>
+        
+//  <div className="App">
+//       <Home/>
+//     </div>
+//         <Main />
+//         <div>
+//         <LoginButton />
+//         <LogoutButton />
+//         <Profile showrequest={this.showrequest} showsomthing={this.showsomthing} showanotherpage={this.showanotherpage}/>
+//         {
+//           this.state.showrequest &&   ///    if(  true && true   )
+//           <somthing />  //   true
+//         }
 
-        {
-          this.state.showsomthing &&
-          <somthing1 />
-        }
+//         {
+//           this.state.showsomthing &&
+//           <somthing1 />
+//         }
 
 
-        {
-          this.state.showanotherpage &&
-          <somthing2 />
-        }
+//         {
+//           this.state.showanotherpage &&
+//           <somthing2 />
+//         }
 
-      </div>
-        {/* <Footer /> */}
-      </div>
+//       </div>
+//       </div>
     )
   }
 }
