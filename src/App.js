@@ -12,6 +12,7 @@ import AdoptList from "./components/AdoptList";
 import Profile from "./components/Profile";
 import LogoutButton from "./components/LogoutButton";
 import LoginButton from "./components/LoginButton";
+import './index.css'
 
 class App extends React.Component {
   constructor(props) {
