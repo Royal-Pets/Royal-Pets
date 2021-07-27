@@ -1,0 +1,9 @@
+.offcan {
+  background-color: white;
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 99;
+}

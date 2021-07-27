@@ -3,6 +3,7 @@ import { withAuth0 } from "@auth0/auth0-react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "react-bootstrap/Card";
 import Profilemenu from "./Profilemenu";
+
 class Profile extends Component {
   render() {
     const { user, isAuthenticated } = this.props.auth0;
