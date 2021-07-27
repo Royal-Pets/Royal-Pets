@@ -29,12 +29,12 @@ class Product extends React.Component {
           handleClose={this.handleClose}
           showMo={this.state.showMo}
         />
-        <Card>
+        <Card className="product" >
           <Card.Img
-            variant="top"
+          variant="top"
+           height="300" style={{ width: "auto", margin: "1rem", borderRadius: "16px", objectFit: "cover" }}
             src={this.props.image}
-            width={250}
-            height={450}
+            
           />
           <Card.Body>
             <Card.Title>Product name : {this.props.productName}</Card.Title>

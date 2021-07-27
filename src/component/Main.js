@@ -66,6 +66,7 @@ class Main extends React.Component {
 
           );
         }),
+        
     });
 
     console.log(e.target.value);

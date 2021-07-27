@@ -28,7 +28,6 @@ export class Cart extends React.Component {
               variant="top"
               src={this.props.image}
               alt={"alsa"}
-              width={250}
             />
           </Modal.Body>
 
