@@ -84,7 +84,7 @@ class Profilemenu extends React.Component {
        
          
         <Button
-          style={{ display: "block", margin: "20px", width: "100%" }}
+          style={{ display: "block", margin: "20px", width: "100%",textDecoration:'none',fontWeight:'50px',color:'gray' }}
           onClick={this.props.requestFunc}
           variant="link"
         >
@@ -92,7 +92,7 @@ class Profilemenu extends React.Component {
         </Button>
 
         <Button
-          style={{ display: "block", margin: "20px", width: "100%" }}
+          style={{ display: "block", margin: "20px", width: "100%",textDecoration:'none',fontWeight:'50px',color:'gray' }}
           onClick={this.props.somthingFunc}
           variant="link"
         >
@@ -100,7 +100,7 @@ class Profilemenu extends React.Component {
         </Button>
 
         <Button
-          style={{ display: "block", margin: "20px", width: "100%" }}
+          style={{ display: "block", margin: "20px", width: "100%",textDecoration:'none',fontWeight:'50px',color:'gray'}}
           onClick={this.props.showanotherpage}
           variant="link"
         >
