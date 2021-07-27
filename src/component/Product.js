@@ -2,6 +2,8 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Cart from "./Cart";
+import Example from './Example'
+
 
 class Product extends React.Component {
   constructor(props) {
@@ -13,9 +15,10 @@ class Product extends React.Component {
   handleClose = () => this.setState({ showMo: false });
   handleShow = () => this.setState({ showMo: true });
 
+
   render() {
     return (
-     
+
       <div
         style={{ textAlign: "center", display: "inline-block", margin: "40px" }}
       >
@@ -40,10 +43,20 @@ class Product extends React.Component {
           <Card.Footer>
             <small className="text-muted"> Price : {this.props.Price}</small>
           </Card.Footer>
-        
 
-          <Button onClick={this.handleShow}> Add to cart </Button>
         </Card>
+
+
+        <Example
+          image={this.props.image}
+          productName={this.props.productName}
+          Price={this.props.Price}
+          addtoCart={this.props.addtoCart}
+          cartProduct={this.props.cartProduct}
+          removeItem={this.props.removeItem}
+          index={this.props.index}
+
+        />
       </div>
     );
   }

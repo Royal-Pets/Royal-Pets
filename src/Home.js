@@ -13,6 +13,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./home.css";
+import { Link } from "react-router-dom";
 
 import HomePetsCard from "./components/HomePetsCard";
 
@@ -85,31 +86,42 @@ class Home extends Component {
                 <Card.Img variant="top" src={imgCard} height="180" />
                 <Card.Title>Timmy</Card.Title>
                 <Card.Text>Our newest cat, Timmy! in need for a....</Card.Text>
-                <Button variant="primary">Our adoption page</Button>
+                <Link to="/adopt">
+                  <Button variant="primary">Our adoption page</Button>
+                </Link>
               </Card.Body>
             </Card>
+
             <Card style={{ width: "18rem" }}>
               <Card.Body>
                 <Card.Img variant="top" src={imgCard} height="180" />
                 <Card.Title>Timmy</Card.Title>
                 <Card.Text>Our newest cat, Timmy! in need for a....</Card.Text>
-                <Button variant="primary">Our adoption page</Button>
+                <Link to="/adopt">
+                  <Button variant="primary">Our adoption page</Button>
+                </Link>
               </Card.Body>
             </Card>
+
             <Card style={{ width: "18rem" }}>
               <Card.Body>
                 <Card.Img variant="top" src={imgCard} height="180" />
                 <Card.Title>Timmy</Card.Title>
                 <Card.Text>Our newest cat, Timmy! in need for a....</Card.Text>
-                <Button variant="primary">Our adoption page</Button>
+                <Link to="/adopt">
+                  <Button variant="primary">Our adoption page</Button>
+                </Link>
               </Card.Body>
             </Card>
+
             <Card style={{ width: "18rem" }}>
               <Card.Body>
                 <Card.Img variant="top" src={imgCard} height="180" />
                 <Card.Title>Timmy</Card.Title>
                 <Card.Text>Our newest cat, Timmy! in need for a....</Card.Text>
-                <Button variant="primary">Our adoption page</Button>
+                <Link to="/adopt">
+                  <Button variant="primary">Our adoption page</Button>
+                </Link>
               </Card.Body>
             </Card>
           </Row>
@@ -119,7 +131,10 @@ class Home extends Component {
             <div className="homeAboutUsText">
               <h2>No animals left in need</h2>
               <p>Since our launch in 1986, we transfer in dogs and cats from public shelters where they are in danger of being euthanized due to space or financial limitations. We then provide them with the best possible care and enrichment until we can help them find their forever homes.</p>
-              <button style={{ width: "fit-content", backgroundColor: "unset", border: "unset", color: "black", padding: "unset" }}>Read More About Us →</button>
+              <Link to="/about">
+                <button style={{ width: "fit-content", backgroundColor: "unset", border: "unset", color: "black", padding: "unset" }}>Read More About Us →</button>
+              </Link>
+
             </div>
           </div>
           <div className="ourPros">
