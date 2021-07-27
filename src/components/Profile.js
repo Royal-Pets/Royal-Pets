@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { withAuth0 } from "@auth0/auth0-react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "react-bootstrap/Card";
+import Button from 'react-bootstrap/Button'
 import Profilemenu from "./Profilemenu";
 
 class Profile extends Component {
@@ -9,27 +10,28 @@ class Profile extends Component {
     const { user, isAuthenticated } = this.props.auth0;
 
     return (
-      <div style={{ background: "#d5f5e9" }}>
+      <div>
         {isAuthenticated && (
           <>
             <div
-              style={{ width: "100%", float: "right", position: "relative" }}
+              style={{ width: "50%", float: "right", position: "relative" }}
             >
               <img
                 style={{ width: "100%" }}
-                src="https://lostpawsrescueoftexas.org/wp-content/uploads/2019/09/Lost-Paws-Rescue-of-Texas-100-Dog-and-Cat-Adoptions-Each-Year-1024x512.jpg"
+                src="https://static.vecteezy.com/system/resources/previews/002/075/608/original/cute-bunny-and-butterfly-cartoon-animal-illustration-vector.jpg"
                 alt="image"
               />
               <div
                 style={{
                   position: "absolute",
                   width: "100%",
-                  textAlign: "center",
-                  top: "480px",
+                  left:'-500px',
+                  top: "200px",
                 }}
               >
+                <br />
                 <img
-                  style={{ width: "20%" }}
+                  style={{ width: "15%" }}
                   src={user && user.picture}
                   alt="Profile"
                   className="rounded-circle img-fluid profile-picture mb-3 mb-md-0"
@@ -38,14 +40,29 @@ class Profile extends Component {
                 <h2>{user.name} </h2>
                 <br />
                 <h3>{user.email}</h3>
+                {/* <Card style={{ width: '20rem' }}>
+                  <Card.Img variant="top" src={user && user.picture} alt="profile" style={{ width: "30%", marginLeft: '106px',borderRadius:'20%' }} />
+                  <Card.Body>
+                    <Card.Title>{user.name}
+                    </Card.Title>
+                    <Card.Text>
+                      {user.email}
+                    </Card.Text>
+                    {/* <Button variant="primary">Go somewhere</Button> */}
+                  {/* </Card.Body>
+                </Card> */} 
               </div>
 
               <div
                 style={{
                   width: "30%",
-                  top: "65%",
+                  top: "0",
                   position: "absolute",
-                  left: "0",
+                  left: "-800px",
+                  height:'100%',
+                  paddingTop:'4%',
+                   background:'#ffecf2',
+                   zIndex:'-1'
                 }}
               >
                 {isAuthenticated && (
