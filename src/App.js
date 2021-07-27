@@ -124,7 +124,7 @@ class App extends React.Component {
               <Main />
             </Route>
             <Route path="/profile">
-              <Profile />
+              <Profile  />
             </Route>
             <Route path="/">
               <Home />
