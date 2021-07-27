@@ -25,14 +25,14 @@ class Profile extends Component {
                <div style={{
                   position: "absolute",
                   width: "60%",
-                  left:'-520px',
+                  left:'-480px',
                   top: "190px",
                 }} class="box"></div>
               <div
                 style={{
                   position: "absolute",
                   width: "100%",
-                  left:'-500px',
+                  left:'-460px',
                   top: "190px",
                 }}
               >
