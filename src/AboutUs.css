@@ -1,0 +1,56 @@
+
+.aboutus ul {
+    list-style:none;
+  
+  }
+  .aboutus ul li{
+    display: inline-flex;
+    /* margin: 10px; */
+  }
+  .aboutus ul li:first-child{
+    margin-right: 30px;
+  }
+  .aboutus ul li:nth-child(2){
+    margin-left: 20px;
+  }
+  .firstSec{
+    display: inline-flex ;
+    margin-left: 50px;
+  
+  }
+  .firstSec div{
+    margin: 30px;
+  
+  }
+  .secSection{
+    display: inline-flex ;
+    margin-left: 50px;
+  
+  }
+  .secSection div{
+    margin: 30px;
+  
+  }
+  .memberCard{
+    box-sizing: border-box;
+    border: 5px rgb(194, 184, 184) solid;
+    overflow: hidden;
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      transform: translatey(0px);
+    }
+    50% {
+      box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+      transform: translatey(-20px);
+    }
+    100% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      transform: translatey(0px);
+    }
+  }

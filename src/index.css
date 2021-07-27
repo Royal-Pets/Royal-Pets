@@ -26,30 +26,3 @@ code {
   color: blanchedalmond;
   margin: 15px;
 }
-
-.aboutus ul {
-  list-style:none;
-
-}
-.aboutus ul li{
-  display: inline-flex;
-  margin-left: 20px;
-}
-.firstSec{
-  display: inline-flex ;
-  margin-left: 50px;
-
-}
-.firstSec div{
-  margin: 30px;
-
-}
-.secSection{
-  display: inline-flex ;
-  margin-left: 50px;
-
-}
-.secSection div{
-  margin: 30px;
-
-}
