@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { withAuth0 } from "@auth0/auth0-react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "react-bootstrap/Card";
-import Profilemenu from "./Profilemenu";
+// import Profilemenu from "./Profilemenu";
 
 class Profile extends Component {
   render() {
@@ -48,11 +48,11 @@ class Profile extends Component {
                   left: "0",
                 }}
               >
-                {isAuthenticated && (
+                {/* {isAuthenticated && (
                   <Profilemenu
                     showrequest={this.props.showrequest}
                     showsomthing={this.props.showsomthing}
-                    showanotherpage={this.props.showanotherpage}
+                    showanotherpage={this.props.showanotherpage} */}
                   />
                 )}
               </div>
