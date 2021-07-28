@@ -12,9 +12,9 @@ import AdoptList from "./components/AdoptList";
 import Profile from "./components/Profile";
 import LogoutButton from "./components/LogoutButton";
 import LoginButton from "./components/LoginButton";
-import './index.css'
-import './components/Header.css'
-import Logo from "./Images/image.png"
+import "./index.css";
+import "./components/Header.css";
+import Logo from "./Images/image.png";
 
 class App extends React.Component {
   constructor(props) {
@@ -46,7 +46,9 @@ class App extends React.Component {
     return (
       <div>
         <Router>
-          <Navbar className='navbar-header' fixed="top"
+          <Navbar
+            className="navbar-header"
+            fixed="top"
             variant="dark"
             className="navbar-header"
             id="mynav"
@@ -64,9 +66,15 @@ class App extends React.Component {
           >
             <Container>
               <Navbar.Brand href="/">
-                <div className='logo'>
-                  <Link style={{ textDecoration: "none", color: "unset" }} to="/">
-                  <img src={Logo} style={{width:'17rem', height:'4rem'}}/>
+                <div className="logo">
+                  <Link
+                    style={{ textDecoration: "none", color: "unset" }}
+                    to="/"
+                  >
+                    <img
+                      src={Logo}
+                      style={{ width: "17rem", height: "4rem" }}
+                    />
                   </Link>
                 </div>
               </Navbar.Brand>
@@ -115,11 +123,7 @@ class App extends React.Component {
                 ) : null}
               </Nav>
 
-              {this.props.auth0.isAuthenticated ? (
-                <LogoutButton />
-              ) : (
-                <LoginButton />
-              )}
+              {this.props.auth0.isAuthenticated ? null : <LoginButton />}
             </Container>
           </Navbar>
           {/* A <Switch> looks through its children <Route>s and
@@ -135,7 +139,7 @@ class App extends React.Component {
               <Main />
             </Route>
             <Route path="/profile">
-              <Profile  />
+              <Profile />
             </Route>
             <Route path="/">
               <Home />
