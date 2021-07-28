@@ -13,62 +13,51 @@ import Profile from "./components/Profile";
 import LogoutButton from "./components/LogoutButton";
 import LoginButton from "./components/LoginButton";
 import './index.css'
-import './components/Header.css'
-import Logo from "./Images/image.png"
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.listener = null;
+
     this.state = {
-      status: "top",
+      showrequest: false,
+      showsomthing: true,
+      showanotherpage: false,
     };
   }
-  componentDidMount() {
-    this.listener = document.addEventListener("scroll", (e) => {
-      var scrolled = document.scrollingElement.scrollTop;
-      if (scrolled >= 120) {
-        if (this.state.status !== "") {
-          this.setState({ status: "" });
-        }
-      } else {
-        if (this.state.status !== "top") {
-          this.setState({ status: "top" });
-        }
-      }
-    });
-  }
-  componentDidUpdate() {
-    document.removeEventListener("scroll", this.listener);
-  }
 
+  requestFunc = async () => {
+    await this.setState({
+      showrequest: false,
+      showsomthing: false,
+      showanotherpage: true,
+    });
+  };
+
+  somthingFunc = async () => {
+    await this.setState({
+      showrequest: true,
+      showsomthing: false,
+      showanotherpage: false,
+    });
+  };
+
+  anotherpageFunc = async () => {
+    await this.setState({
+      showrequest: false,
+      showsomthing: true,
+      showanotherpage: false,
+    });
+  };
   render() {
     return (
       <div>
         <Router>
-          <Navbar className='navbar-header' fixed="top"
-            variant="dark"
-            className="navbar-header"
-            id="mynav"
-            style={{
-              backgroundColor:
-                this.state.status === "top"
-                  ? "rgba(0, 0, 0, 0.0)"
-                  : "rgba(0, 0, 0, 1)",
-              boxShadow:
-                this.state.status === "top"
-                  ? "0 8px 8px rgba(0, 0, 0, 0)"
-                  : "0 8px 8px rgba(0, 0, 0, 0.308)",
-              transition: "1s",
-            }}
-          >
+          <Navbar bg="dark" variant="dark">
             <Container>
               <Navbar.Brand href="/">
-                <div className='logo'>
-                  <Link style={{ textDecoration: "none", color: "unset" }} to="/">
-                  <img src={Logo} style={{width:'17rem', height:'4rem'}}/>
-                  </Link>
-                </div>
+                <Link style={{ textDecoration: "none", color: "unset" }} to="/">
+                  Royal Pets
+                </Link>
               </Navbar.Brand>
               <Nav className="me-auto">
                 <Nav.Link>
