@@ -21,25 +21,23 @@ export class Masseges extends Component {
   render() {
     return (
       <>
-        <Card
-          style={{
-            margin: "35px auto",
-            width: "35%",
-            background: "rgba(255, 255, 255, 0.3)",
-            border: "1px solid black",
-            borderRadius: "50px",
-            padding: "20px",
-          }}
-        >
+        <Card className="messagesCard">
           <Card.Body>
             <Card.Title>From: {this.props.message.sender}</Card.Title>
+            <hr style={{ border: "thin dotted var(--main-color)" }}></hr>
             <Card.Title>To: {this.props.message.receiver}</Card.Title>
+            <hr style={{ border: "thin dotted var(--main-color)" }}></hr>
             <Card.Text>
-              <span style={{ fontWeight: "bold" }}>Title: </span>
-              {this.props.message.title}
-              <br />
-              <span style={{ fontWeight: "bold" }}>Message: </span> {<br />}{" "}
-              {this.props.message.message}
+              <div style={{display:"flex", gap: "1rem"}}>
+                <div>
+                  <div style={{ fontWeight: "bold", color: "var(--main-color)" }}>Title</div>
+                  <div style={{ fontWeight: "bold", color: "var(--main-color)" }}>Message</div>
+                </div>
+                <div>
+                  <div>{this.props.message.title}</div>
+                  <div>{this.props.message.message}</div>
+                </div>
+              </div>
             </Card.Text>
 
             {/* <Button

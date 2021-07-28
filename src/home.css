@@ -241,3 +241,24 @@
 }.grassThingH2Container6 h6 {
   font-size: 16px;
 }
+
+
+.root {
+  min-height: 100vh;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+}
+.messagesCard{
+    margin: 35px auto;
+    width: 35%;
+    background: rgba(255, 255, 255, 0.3);
+    border: 3px solid var(--main-color);
+    border-radius: 50px;
+    padding: 20px;
+    box-shadow: 8px 12px var(--main-color-sub1);
+}
+.headerContainer .nav-link a {
+  font-weight: 600;
+}

@@ -24,6 +24,7 @@ class Profilemenu extends React.Component {
               display: "block",
               margin: "20px",
               width: "100%",
+              fontFamily: 'Varela Round',
             }}
             className="float-end checkAllAdoptables"
             variant="link"
@@ -39,6 +40,7 @@ class Profilemenu extends React.Component {
               display: "block",
               margin: "20px",
               width: "100%",
+              fontFamily: 'Varela Round',
             }}
             className="float-end checkAllAdoptables"
             variant="link"
@@ -54,6 +56,7 @@ class Profilemenu extends React.Component {
               display: "block",
               margin: "20px",
               width: "100%",
+              fontFamily: 'Varela Round',
             }}
             className="float-end checkAllAdoptables"
             variant="link"
