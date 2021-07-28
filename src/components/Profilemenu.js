@@ -2,6 +2,7 @@ import React from "react";
 import { withAuth0 } from "@auth0/auth0-react";
 import { Button, Offcanvas, Nav } from "react-bootstrap";
 import OffcanvasMenu from "react-offcanvas-menu-component";
+import LogoutButton from "./LogoutButton";
 
 class Profilemenu extends React.Component {
   constructor(props) {
@@ -80,7 +81,7 @@ class Profilemenu extends React.Component {
       //     anotherpage
       //   </Button>
       // </div>
-      <div style={{ margin: "25px", textAlign: "center" }}>
+      <div style={{ margin: "25px", textAlign: "center", zIndex: "99" }}>
         <Button
           style={{
             display: "block",
@@ -92,10 +93,10 @@ class Profilemenu extends React.Component {
             border: "1px solid black",
             backgroundColor: "#fbeaf7",
           }}
-          onClick={this.props.requestFunc}
+          onClick={this.props.showrequest}
           variant="link"
         >
-          request
+          Requests
         </Button>
 
         <Button
@@ -109,10 +110,10 @@ class Profilemenu extends React.Component {
             border: "1px solid black",
             backgroundColor: "#fbeaf7",
           }}
-          onClick={this.props.somthingFunc}
+          onClick={this.props.showmessages}
           variant="link"
         >
-          somthing
+          Messages
         </Button>
 
         <Button
@@ -126,10 +127,13 @@ class Profilemenu extends React.Component {
             border: "1px solid black",
             backgroundColor: "#fbeaf7",
           }}
-          onClick={this.props.showanotherpage}
+          onClick={() => {
+            const logout = this.props.auth0.logout;
+            logout({ returnTo: window.location.origin });
+          }}
           variant="link"
         >
-          anotherpage
+          Logout
         </Button>
       </div>
     );

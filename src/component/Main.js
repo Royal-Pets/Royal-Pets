@@ -3,7 +3,7 @@ import products from "./products.json";
 import Product from "./Product";
 import FilterProduct from "./FilterProduct";
 import { withAuth0 } from "@auth0/auth0-react";
-
+import axios from "axios";
 
 class Main extends React.Component {
   constructor(props) {
@@ -15,7 +15,7 @@ class Main extends React.Component {
       Price: "",
       image: "",
       products: null,
-      index: 0
+      index: 0,
     };
   }
   componentDidMount() {
@@ -31,14 +31,16 @@ class Main extends React.Component {
             cartProduct={this.state.cartProduct}
             removeItem={this.removeProduct}
             index={this.state.index}
-
+            clearCart={this.clearCart}
           />
         );
-      })
-    })
+      }),
+    });
   }
 
-
+  clearCart = () => {
+    this.setState({ cartProduct: new Array() });
+  };
 
   submitForm = (e) => {
     e.preventDefault();
@@ -61,51 +63,45 @@ class Main extends React.Component {
               cartProduct={this.state.cartProduct}
               removeItem={this.removeProduct}
               index={this.state.index}
-
+              clearCart={this.clearCart}
             />
-
           );
         }),
-        
     });
 
     console.log(e.target.value);
   };
 
-  onclickCart = (productName, itsFor, Price, image,) => {
+  onclickCart = (productName, itsFor, Price, image) => {
+    console.log(this.state.cartProduct);
     this.state.cartProduct.push({
       index: this.state.index++,
       productName: productName,
       itsFor: itsFor,
       Price: Price,
-      image: image
+      image: image,
     });
     this.setState({
-      cartProduct: this.state.cartProduct
-    })
-  }
+      cartProduct: this.state.cartProduct,
+    });
+  };
 
   removeProduct = (index) => {
     this.state.cartProduct.splice(index, 1);
     this.setState({
-      cartProduct: this.state.cartProduct
-    })
-  }
-
-
+      cartProduct: this.state.cartProduct,
+    });
+  };
 
   render() {
-    const { user, isAuthenticated } = this.props.auth0;
+    // const { user, isAuthenticated } = this.props.auth0;
 
     return (
       <>
-        {isAuthenticated &&
-          <div>
-            <FilterProduct submitForm={this.submitForm} />
-            {this.state.products}
-
-          </div>
-        }
+        <div>
+          <FilterProduct submitForm={this.submitForm} />
+          {this.state.products}
+        </div>
       </>
     );
   }

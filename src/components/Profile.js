@@ -6,7 +6,25 @@ import Button from "react-bootstrap/Button";
 import Profilemenu from "./Profilemenu";
 import Dogs from "../assets/dogs.png";
 import "../Profile.css";
+import UserRequests from "./UserRequests";
+import MessageList from "./MessageList";
+
 class Profile extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      page: null,
+    };
+  }
+
+  showrequest = () => {
+    this.setState({ page: <UserRequests auth={this.props.auth0} /> });
+  };
+  showmessages = () => {
+    this.setState({ page: <MessageList auth={this.props.auth0} /> });
+  };
+  showlogout = () => {};
   render() {
     const { user, isAuthenticated } = this.props.auth0;
 
@@ -70,20 +88,21 @@ class Profile extends Component {
                   left: "-800px",
                   height: "100%",
                   paddingTop: "4%",
-                  zIndex: "-1",
+                  zIndex: "10",
                   fontFamily: "serif",
                 }}
               >
                 {isAuthenticated && (
                   <Profilemenu
-                    showrequest={this.props.showrequest}
-                    showsomthing={this.props.showsomthing}
-                    showanotherpage={this.props.showanotherpage}
+                    showrequest={this.showrequest}
+                    showmessages={this.showmessages}
+                    showlogout={this.showlogout}
                   />
                 )}
               </div>
             </div>
             <br style={{ clear: "both" }} />
+            {this.state.page}
           </>
         )}
       </div>
