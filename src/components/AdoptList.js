@@ -23,15 +23,17 @@ export class AdoptList extends Component {
     let pet = e.target.pet.value;
     let description = e.target.description.value;
     let img_url = e.target.img.value;
-
+    let bread = e.target.bread.value;
+    let age = e.target.age.value;
     let adoptObj = {
       pet: pet,
       owner: this.props.auth0.user.name,
       email: this.props.auth0.user.email,
+      age: age,
+      bread: bread,
       description: description,
       img_url: img_url,
     };
-
     console.log(adoptObj);
     axios
       .post("http://localhost:3002/addAdopt", adoptObj)
@@ -78,6 +80,10 @@ export class AdoptList extends Component {
           <Modal.Body>
             <Form onSubmit={this.submitForm}>
               <Form.Control name="pet" type="text" placeholder="Name" />
+              <br />
+              <Form.Control name="bread" type="text" placeholder="Bread" />
+              <br />
+              <Form.Control name="age" type="text" placeholder="Age" />
               <br />
               <Form.Control name="img" type="text" placeholder="Img url" />
               <br />
