@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, Button } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 export class Cart extends React.Component {
   constructor(props) {
@@ -24,11 +24,7 @@ export class Cart extends React.Component {
           </Modal.Header>
 
           <Modal.Body>
-            <Image
-              variant="top"
-              src={this.props.image}
-              alt={"alsa"}
-            />
+            <Image variant="top" src={this.props.image} alt={"alsa"} />
           </Modal.Body>
 
           <Modal.Footer>{this.props.Price}</Modal.Footer>

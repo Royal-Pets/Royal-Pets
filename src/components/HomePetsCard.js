@@ -14,7 +14,7 @@ class HomePetsCard extends React.Component {
     return (
       <>
         <div className="ourAdopteesContainer">
-          <h2 className="m-3">Searching for a home</h2>
+          <h2 className="m-3">Pet Care Products</h2>
           <div className="ourAdoptees">
             {this.props.petsData.map((ele, idx) => {
               return (

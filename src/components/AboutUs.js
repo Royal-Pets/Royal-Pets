@@ -1,5 +1,4 @@
 import React from "react";
-import { Card, Button } from "react-bootstrap/";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import Maram from "./members/IMG_0502.JPG";
 import Ghaidaa from "./members/ghaidaa.jpg";

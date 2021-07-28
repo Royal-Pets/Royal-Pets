@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { Component } from "react";
+import React from "react";
 import { withAuth0 } from "@auth0/auth0-react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -9,7 +9,6 @@ import AboutUs from "./components/AboutUs";
 import Footer from "./components/Footer";
 import AdoptList from "./components/AdoptList";
 import Profile from "./components/Profile";
-import LogoutButton from "./components/LogoutButton";
 import LoginButton from "./components/LoginButton";
 import "./index.css";
 import "./components/Header.css";
@@ -53,44 +52,41 @@ class App extends React.Component {
             id="mynav"
             style={{
               backgroundColor: "var(--main-background-color)",
-              boxShadow: this.state.status === "top" ? "0 8px 8px rgba(0, 0, 0, 0)" : "0 4px 4px rgba(0, 0, 0, 0.308)",
-              transition: "1s", zIndex: "500000",
+              boxShadow:
+                this.state.status === "top"
+                  ? "0 8px 8px rgba(0, 0, 0, 0)"
+                  : "0 4px 4px rgba(0, 0, 0, 0.308)",
+              transition: "1s",
+              zIndex: "500000",
             }}
           >
-            <Container className="headerContainer" >
+            <Container className="headerContainer">
               <Navbar.Brand href="/">
                 <div className="logo">
                   <Link to="/">
-                    <img src={Logo} style={{ height: "45px", objectFit: "cover" }} />
+                    <img
+                      src={Logo}
+                      style={{ height: "45px", objectFit: "cover" }}
+                    />
                   </Link>
                 </div>
               </Navbar.Brand>
               <Nav className="me-auto">
                 <Nav.Link>
-                  <Link to="/">
-                    Home
-                  </Link>
+                  <Link to="/">Home</Link>
                 </Nav.Link>
                 <Nav.Link>
-                  <Link to="/store">
-                    Store
-                  </Link>
+                  <Link to="/store">Store</Link>
                 </Nav.Link>
                 <Nav.Link>
-                  <Link to="/adopt">
-                    Adopt
-                  </Link>
+                  <Link to="/adopt">Adopt</Link>
                 </Nav.Link>
                 <Nav.Link>
-                  <Link to="/about">
-                    About Us
-                  </Link>
+                  <Link to="/about">About Us</Link>
                 </Nav.Link>
                 {this.props.auth0.isAuthenticated ? (
                   <Nav.Link>
-                    <Link to="/profile">
-                      Profile
-                    </Link>
+                    <Link to="/profile">Profile</Link>
                   </Nav.Link>
                 ) : null}
               </Nav>
@@ -119,7 +115,7 @@ class App extends React.Component {
             </Route>
           </Switch>
         </Router>
-        
+
         <Footer />
       </div>
       //       <div>
