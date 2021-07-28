@@ -30,7 +30,7 @@ export class AdoptCard extends Component {
       message: e.target.message.value,
     };
     axios
-      .post(`${process.env.REACT_APP_Host}/addmessage`, messageObj)
+      .post(`${process.env.REACT_APP_HOST}/addmessage`, messageObj)
       .then((resultData) => {
         console.log(resultData[0]);
       });
@@ -104,29 +104,6 @@ export class AdoptCard extends Component {
             </div>
           </div>
         </div>
-        {/* <Card style={{ margin: "35px auto", width: "50%" }}>
-          <Card.Img
-            variant="top"
-            src={this.props.req.img_url}
-            style={{ height: "300px", width: "100%", padding: "20px" }}
-          />
-          <Card.Body>
-            <Card.Title>{this.props.req.pet}</Card.Title>
-            <Card.Text>{this.props.req.owner}</Card.Text>
-            <Card.Text>{this.props.req.description}</Card.Text>
-            <Button
-              variant="danger" 
-              onClick={this.handleShow}
-              style={{
-                display: "block",
-                margin: "0 auto",
-                padding: "5px 40px",
-              }}
-            >
-              Contact
-            </Button>
-          </Card.Body>
-        </Card> */}
       </>
     );
   }

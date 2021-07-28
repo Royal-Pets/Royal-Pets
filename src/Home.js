@@ -17,7 +17,6 @@ import imgCard3 from "./Images/750x750 kitten.jpg";
 import imgCard4 from "./Images/750x750 whiteCat.jpg";
 import imgCard5 from "./Images/41217047470_45aa7a4651_k.jpg";
 
-import newsImgCard1 from "./Images/black cat looking at viewer.webp";
 import newsImgCard2 from "./Images/cat-ham.jpg";
 import newsImgCard3 from "./Images/kitten cam.jpg";
 import newsImgCard4 from "./Images/small rabbit.jpg";

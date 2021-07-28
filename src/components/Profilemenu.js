@@ -1,8 +1,5 @@
 import React from "react";
 import { withAuth0 } from "@auth0/auth0-react";
-import { Button, Offcanvas, Nav } from "react-bootstrap";
-import OffcanvasMenu from "react-offcanvas-menu-component";
-import LogoutButton from "./LogoutButton";
 
 class Profilemenu extends React.Component {
   constructor(props) {

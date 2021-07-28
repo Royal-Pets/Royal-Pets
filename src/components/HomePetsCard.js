@@ -47,6 +47,7 @@ class HomePetsCard extends React.Component {
                       </Card.Title>
                       <Card.Text>{ele.text}</Card.Text>
 
+
                       <div className="mt-auto ButtonContainer">
                         <Link to={ele.destination}>
                           <button>{ele.buyText}</button>

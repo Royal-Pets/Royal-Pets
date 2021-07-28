@@ -3,7 +3,6 @@ import products from "./products.json";
 import Product from "./Product";
 import FilterProduct from "./FilterProduct";
 import { withAuth0 } from "@auth0/auth0-react";
-import axios from "axios";
 
 class Main extends React.Component {
   constructor(props) {
