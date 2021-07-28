@@ -14,7 +14,7 @@ class Profilemenu extends React.Component {
 
   handleClose = () => this.setState({ show: false });
   handleShow = () => this.setState({ show: true });
- render() {
+  render() {
     return (
       // <>
       //   {/* <OffcanvasMenu
@@ -81,10 +81,17 @@ class Profilemenu extends React.Component {
       //   </Button>
       // </div>
       <div style={{ margin: "25px", textAlign: "center" }}>
-       
-         
         <Button
-          style={{ display: "block", margin: "20px", width: "100%",textDecoration:'none',color:'gray',fontSize:'20px',border:'1px solid black',backgroundColor:'#fbeaf7' }}
+          style={{
+            display: "block",
+            margin: "20px",
+            width: "100%",
+            textDecoration: "none",
+            color: "gray",
+            fontSize: "20px",
+            border: "1px solid black",
+            backgroundColor: "#fbeaf7",
+          }}
           onClick={this.props.requestFunc}
           variant="link"
         >
@@ -92,7 +99,16 @@ class Profilemenu extends React.Component {
         </Button>
 
         <Button
-          style={{ display: "block", margin: "20px", width: "100%",textDecoration:'none',color:'gray',fontSize:'20px',border:'1px solid black',backgroundColor:'#fbeaf7'  }}
+          style={{
+            display: "block",
+            margin: "20px",
+            width: "100%",
+            textDecoration: "none",
+            color: "gray",
+            fontSize: "20px",
+            border: "1px solid black",
+            backgroundColor: "#fbeaf7",
+          }}
           onClick={this.props.somthingFunc}
           variant="link"
         >
@@ -100,7 +116,16 @@ class Profilemenu extends React.Component {
         </Button>
 
         <Button
-          style={{ display: "block", margin: "20px", width: "100%",textDecoration:'none',color:'gray',fontSize:'20px',border:'1px solid black',backgroundColor:'#fbeaf7' }}
+          style={{
+            display: "block",
+            margin: "20px",
+            width: "100%",
+            textDecoration: "none",
+            color: "gray",
+            fontSize: "20px",
+            border: "1px solid black",
+            backgroundColor: "#fbeaf7",
+          }}
           onClick={this.props.showanotherpage}
           variant="link"
         >
