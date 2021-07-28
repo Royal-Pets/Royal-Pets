@@ -72,7 +72,39 @@ export class AdoptCard extends Component {
           </Modal.Body>
           <Modal.Footer></Modal.Footer>
         </Modal>
-        <Card style={{ margin: "35px auto", width: "50%" }}>
+
+        <div>
+          <div className="ourAdopteesContainer">
+            <div className="ourAdoptees">
+              <Card>
+                <div className="cardBodyAndShadow"></div>
+                <Card.Img
+                  variant="top"
+                  src={this.props.req.img_url}
+                  height="180"
+                  style={{
+                    width: "auto",
+                    margin: "1rem",
+                    borderRadius: "16px",
+                    objectFit: "cover",
+                  }}
+                />
+                <Card.Body className="d-flex flex-column">
+                  <Card.Title className="titleAndAge">
+                    <div>{this.props.req.pet}</div>
+                    <div>{this.props.req.age}</div>
+                  </Card.Title>
+                  <Card.Text>{this.props.req.description}</Card.Text>
+
+                  <div className="mt-auto ButtonContainer">
+                    <button onClick={this.handleShow}>Contact </button>
+                  </div>
+                </Card.Body>
+              </Card>
+            </div>
+          </div>
+        </div>
+        {/* <Card style={{ margin: "35px auto", width: "50%" }}>
           <Card.Img
             variant="top"
             src={this.props.req.img_url}
@@ -83,7 +115,7 @@ export class AdoptCard extends Component {
             <Card.Text>{this.props.req.owner}</Card.Text>
             <Card.Text>{this.props.req.description}</Card.Text>
             <Button
-              variant="danger"
+              variant="danger" 
               onClick={this.handleShow}
               style={{
                 display: "block",
@@ -94,7 +126,7 @@ export class AdoptCard extends Component {
               Contact
             </Button>
           </Card.Body>
-        </Card>
+        </Card> */}
       </>
     );
   }

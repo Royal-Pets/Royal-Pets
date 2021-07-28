@@ -108,7 +108,9 @@ export class AdoptList extends Component {
           </Modal.Body>
           <Modal.Footer></Modal.Footer>
         </Modal>
-        <div>{this.state.requests}</div>;
+        <div className="productPage">
+          <div className="storeProductsContainer">{this.state.requests}</div>
+        </div>
       </>
     );
   }

@@ -17,7 +17,9 @@ export class UserAdopCard extends Component {
     //remove
     axios
       .delete("https://royal-pets.herokuapp.com/removeAdopt", this.props.req)
-      .then((resultData) => {});
+      .then((resultData) => {
+        this.props.renderCards();
+      });
   };
   /**
    *
@@ -27,29 +29,36 @@ export class UserAdopCard extends Component {
   render() {
     return (
       <>
-        <Card style={{ margin: "35px auto", width: "50%" }}>
-          <Card.Img
-            variant="top"
-            src={this.props.req.img_url}
-            style={{ height: "300px", width: "100%", padding: "20px" }}
-          />
-          <Card.Body>
-            <Card.Title>Name: {this.props.req.pet}</Card.Title>
-            <Card.Text>Owner: {this.props.req.owner}</Card.Text>
-            <Card.Text>Description: {this.props.req.description}</Card.Text>
-            <Button
-              variant="danger"
-              onClick={this.removeCard}
-              style={{
-                display: "block",
-                margin: "0 auto",
-                padding: "5px 40px",
-              }}
-            >
-              Remove
-            </Button>
-          </Card.Body>
-        </Card>
+        <div>
+          <div className="ourAdopteesContainer">
+            <div className="ourAdoptees">
+              <Card>
+                <div className="cardBodyAndShadow"></div>
+                <Card.Img
+                  variant="top"
+                  src={this.props.req.img_url}
+                  height="180"
+                  style={{
+                    width: "auto",
+                    margin: "1rem",
+                    borderRadius: "16px",
+                    objectFit: "cover",
+                  }}
+                />
+                <Card.Body className="d-flex flex-column">
+                  <Card.Title className="titleAndAge">
+                    <div>{this.props.req.pet}</div>
+                    <div>{this.props.req.age}</div>
+                  </Card.Title>
+                  <Card.Text>{this.props.req.description}</Card.Text>
+                  <div className="mt-auto ButtonContainer">
+                    <button onClick={this.removeCard}>Remove </button>
+                  </div>
+                </Card.Body>
+              </Card>
+            </div>
+          </div>
+        </div>
       </>
     );
   }

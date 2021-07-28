@@ -21,13 +21,32 @@ class Main extends React.Component {
   componentDidMount() {
     this.setState({
       products: products.map((p) => {
-        return <Product productName={p.productName} itsFor={p.itsFor} Price={p.Price} image={p.image} addtoCart={this.onclickCart} cartProduct={this.state.cartProduct} removeItem={this.removeProduct} index={this.state.index} clearCart={this.clearCart} />;
+        return (
+          <Product
+            productName={p.productName}
+            itsFor={p.itsFor}
+            Price={p.Price}
+            image={p.image}
+            addtoCart={this.onclickCart}
+            cartProduct={this.state.cartProduct}
+            removeItem={this.removeProduct}
+            index={this.state.index}
+            clearCart={this.clearCart}
+          />
+        );
       }),
     });
   }
 
   clearCart = () => {
-    this.setState({ cartProduct: new Array() });
+    const len = this.state.cartProduct.length;
+
+    for (let i = 0; i < len; i++) {
+      this.state.cartProduct.splice(0, 1);
+      this.setState({
+        cartProduct: this.state.cartProduct,
+      });
+    }
   };
 
   submitForm = (e) => {
@@ -41,7 +60,19 @@ class Main extends React.Component {
           }
         })
         .map((p) => {
-          return <Product productName={p.productName} itsFor={p.itsFor} Price={p.Price} image={p.image} addtoCart={this.onclickCart} cartProduct={this.state.cartProduct} removeItem={this.removeProduct} index={this.state.index} clearCart={this.clearCart} />;
+          return (
+            <Product
+              productName={p.productName}
+              itsFor={p.itsFor}
+              Price={p.Price}
+              image={p.image}
+              addtoCart={this.onclickCart}
+              cartProduct={this.state.cartProduct}
+              removeItem={this.removeProduct}
+              index={this.state.index}
+              clearCart={this.clearCart}
+            />
+          );
         }),
     });
 
