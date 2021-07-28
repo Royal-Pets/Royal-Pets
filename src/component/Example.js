@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Button, Offcanvas, ListGroup, Modal, Form } from "react-bootstrap";
 import { withAuth0 } from "@auth0/auth0-react";
 
+
 export class Example extends Component {
   constructor(props) {
     super(props);
@@ -39,13 +40,7 @@ export class Example extends Component {
   addToCart = () => {
     this.setState({ showItems: true });
 
-    this.props.auth0.isAuthenticated &&
-      this.props.addtoCart(
-        this.props.productName,
-        this.props.itsFor,
-        this.props.Price,
-        this.props.image
-      );
+    this.props.auth0.isAuthenticated && this.props.addtoCart(this.props.productName, this.props.itsFor, this.props.Price, this.props.image);
     this.props.auth0.isAuthenticated && this.handleShow();
   };
 
@@ -77,95 +72,72 @@ export class Example extends Component {
 
         <Offcanvas show={this.state.show} onHide={this.handleClose}>
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title>Cart</Offcanvas.Title>
+            <Offcanvas.Title>Cart <img style={{height:"30px"}} src="http://simpleicon.com/wp-content/uploads/Shopping-Cart-9.png"/></Offcanvas.Title>
           </Offcanvas.Header>
           {this.state.showItems && (
             <Offcanvas.Body>
               <ListGroup>
                 {this.props.cartProduct.map((ele) => (
-                  <>
-                    <ListGroup.Item>
-                      {ele.productName} <br></br>
-                      {ele.Price}
-                      {" $"}
+                  <div className="namePriceAndRemove">
+                    <ListGroup.Item className="priceAndNameExample">
+                      <p>{ele.productName}</p>
+                      <p>
+                        {" $"}
+                        {ele.Price}
+                      </p>
                     </ListGroup.Item>
-                    <Button variant="danger" onClick={this.removeFromCart}>
+                    <Button className="btnDangerExample" variant="danger" onClick={this.removeFromCart}>
                       Remove
                     </Button>
-                  </>
+                  </div>
                 ))}
               </ListGroup>
               <br />
               <h3>
-                <span style={{ fontSize: "24px", color: "rgb(92, 92, 92)" }}>
-                  Total :{" "}
-                </span>
-                {this.props.cartProduct.reduce(
-                  (acc, ele) => (acc += Number(ele.Price)),
-                  0
-                )}{" "}
-                $
+                <span style={{ fontSize: "24px", color: "rgb(92, 92, 92)" }}>Total : </span>
+                {this.props.cartProduct.reduce((acc, ele) => (acc += Number(ele.Price)), 0)} $
               </h3>
             </Offcanvas.Body>
           )}
-          <Button
-            style={{ borderRadius: "0" }}
-            variant="success"
-            onClick={this.FormhandleShow}
-          >
+          <Button className="exampleCheckoutBtn" style={{ borderRadius: "0" , backgroundColor: "var(--main-color)", border:"none"}}  onClick={this.FormhandleShow}>
             Checkout
           </Button>
         </Offcanvas>
 
         <Modal show={this.state.Formshow} onHide={this.FormhandleClose}>
-          <Modal.Header closeButton>
+          <div className="paymentModal" >
+          <Modal.Header>
             <Modal.Title>Payment Receipt</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <Form onSubmit={this.submitForm}>
-              <Form.Label>Name</Form.Label>
               <Form.Control name="title" type="text" placeholder="Your Name" />
               <br />
-              <Form.Label>Address</Form.Label>
-              <Form.Control
-                name="title"
-                type="text"
-                placeholder="Street Address"
-              />
+              <Form.Control name="title" type="text" placeholder="Street Address" />
               <br />
-              <Form.Control
-                name="title"
-                type="text"
-                placeholder="Street Address Line 2"
-              />
+              <Form.Control name="title" type="text" placeholder="Street Address Line 2" />
               <br />
               <Form.Control name="title" type="text" placeholder="City" />
               <br />
-              <Form.Control
-                name="title"
-                type="text"
-                placeholder="Postal / Zip Code"
-              />
+              <Form.Control name="title" type="text" placeholder="Postal / Zip Code" />
               <br />
               <Form.Label>Date</Form.Label>
               <Form.Control name="title" type="text" placeholder="mm-dd-yyyy" />
               <br />
-              <Form.Label>Payment Method</Form.Label>
-              <Form.Check type="radio" name="pay" label="Card" />
-              <Form.Check type="radio" name="pay" label="Check" />
-              <Form.Check type="radio" name="pay" label="Cash" />
+              <Form.Label>Payment Method</Form.Label> &nbsp; &nbsp;
+              <Form.Check inline type="radio" name="pay" label="Card" />
+              <Form.Check inline type="radio" name="pay" label="Check" />
+              <Form.Check inline type="radio" name="pay" label="Cash" />
+              
+              <br />
+              <br />
               <br />
 
-              <Button
-                type="submit"
-                variant="primary"
-                style={{ display: "block", margin: "0 auto" }}
-              >
-                Send
+              <Button className="storeCheckoutButton" type="submit" variant="primary" style={{ display: "block", margin: "0 auto" }}>
+                Pay
               </Button>
             </Form>
-          </Modal.Body>
-          <Modal.Footer></Modal.Footer>
+          </Modal.Body></div>
         </Modal>
       </>
     );

@@ -1,9 +1,45 @@
+.profilePageImgAndName {
+	display: flex !important;
+
+	align-items: center; 
+	gap: 1rem;
+}
+.profileDiv{
+	min-height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 .box{
-	width: 380px; height: 277px;
+	width: 380px; height: max-content;
+	padding: 2rem 4rem;
 	background-color: #DDFFF7;
 	position: relative;
 	box-shadow: 10px 10px 42px 0 rgba(0,0,0,0.75);
@@ -13,13 +49,14 @@
 	filter:none;
 	z-index: -1;
 	content:'';
-	width:calc(100% + (50px * 2));
-	height:calc(100% + (50px * 2));
+	width:calc(100% + (50px));
+	height:calc(100% );
 	position: absolute;
 	display: block;
 	animation: border 10s ease-in-out infinite;
 	transform:translateX(-50px) translateY(-50px);
   }
+	
   @keyframes border {
 	0%, 100% {
 	  -webkit-clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
@@ -41,10 +78,3 @@
 	  clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
   }
   
-  .box:hover:after{
-	animation-delay: -0.1s;
-  }
-  .box:hover:before, .box:hover:after {
-  
-			animation-duration: 0.2s;
-  }

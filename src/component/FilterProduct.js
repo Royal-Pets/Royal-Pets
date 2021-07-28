@@ -15,8 +15,8 @@ export class FilterProduct extends React.Component {
                 <Form >
 
 
-                    <Form.Group aria-label="Default select example">
-                        <Form.Label className="form">Choose your pets </Form.Label>
+                    <Form.Group className="FilterFormContainer">
+                        <Form.Label className="form">Filter your Pet Needs</Form.Label>
                         <Form.Control className="formm"onChange={this.props.submitForm}  style={{ marginRight: "15px" }} name="pets" id="pets" as='select'>
                             <option value="All"> All </option>
                             <option value="Cats"> Cats </option>
