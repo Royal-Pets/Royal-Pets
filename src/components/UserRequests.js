@@ -36,11 +36,14 @@ export class UserRequests extends Component {
       .post("https://royal-pets.herokuapp.com/addAdopt", adoptObj)
       .then((resultData) => {
         this.setState({
-          requests: resultData.data.map((req) => <UserAdopCard req={req} />),
+          requests: resultData.data.map((req) => (
+            <UserAdopCard renderCards={this.renderCards} req={req} />
+          )),
         });
       });
   };
-  componentDidMount() {
+
+  renderCards = () => {
     axios
       .get(
         `https://royal-pets.herokuapp.com/userAdoptList?email=${this.props.auth.user.email}`
@@ -48,12 +51,17 @@ export class UserRequests extends Component {
       .then((resultData) => {
         console.log(resultData.data);
         this.setState({
-          requests: resultData.data.map((req) => <UserAdopCard req={req} />),
+          requests: resultData.data.map((req) => (
+            <UserAdopCard renderCards={this.renderCards} req={req} />
+          )),
         });
       })
       .catch((error) => {
         console.log(error);
       });
+  };
+  componentDidMount() {
+    this.renderCards();
   }
 
   render() {
@@ -91,6 +99,7 @@ export class UserRequests extends Component {
                 />
               </FloatingLabel>
               <br />
+
               <Button
                 type="submit"
                 variant="primary"
@@ -103,7 +112,9 @@ export class UserRequests extends Component {
           </Modal.Body>
           <Modal.Footer></Modal.Footer>
         </Modal>
-        <div>{this.state.requests}</div>;
+        <div className="productPage">
+          <div className="storeProductsContainer">{this.state.requests}</div>
+        </div>
       </>
     );
   }
