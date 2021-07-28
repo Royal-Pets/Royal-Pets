@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Card, Button, Modal, Form, FloatingLabel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { withAuth0 } from "@auth0/auth0-react";
+import axios from "axios";
 
 export class AdoptCard extends Component {
   constructor(props) {
@@ -21,11 +22,18 @@ export class AdoptCard extends Component {
    */
   submitForm = (e) => {
     e.preventDefault();
-    let message = e.target.message.value;
-    let title = e.target.title.value;
 
-    // if submited should be add to db using axios
-    console.log(title, message);
+    let messageObj = {
+      sender: this.props.auth0.user.email,
+      receiver: this.props.req.email,
+      title: e.target.title.value,
+      message: e.target.message.value,
+    };
+    axios
+      .post("http://localhost:3002/addmessage", messageObj)
+      .then((resultData) => {
+        console.log(resultData[0]);
+      });
   };
 
   render() {
@@ -67,8 +75,8 @@ export class AdoptCard extends Component {
         <Card style={{ margin: "35px auto", width: "50%" }}>
           <Card.Img
             variant="top"
-            src={this.props.req.img}
-            style={{ height: "300px", width: "850PX", padding: "20px" }}
+            src={this.props.req.img_url}
+            style={{ height: "300px", width: "100%", padding: "20px" }}
           />
           <Card.Body>
             <Card.Title>{this.props.req.pet}</Card.Title>

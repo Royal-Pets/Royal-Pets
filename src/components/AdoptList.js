@@ -22,9 +22,24 @@ export class AdoptList extends Component {
     e.preventDefault();
     let pet = e.target.pet.value;
     let description = e.target.description.value;
-    let img = e.target.img.value;
-    // if submited should be add to db using axios
-    console.log(pet, description);
+    let img_url = e.target.img.value;
+
+    let adoptObj = {
+      pet: pet,
+      owner: this.props.auth0.user.name,
+      email: this.props.auth0.user.email,
+      description: description,
+      img_url: img_url,
+    };
+
+    console.log(adoptObj);
+    axios
+      .post("http://localhost:3002/addAdopt", adoptObj)
+      .then((resultData) => {
+        this.setState({
+          requests: resultData.data.map((req) => <AdoptCard req={req} />),
+        });
+      });
   };
   componentDidMount() {
     axios

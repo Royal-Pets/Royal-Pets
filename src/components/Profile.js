@@ -2,49 +2,76 @@ import React, { Component } from "react";
 import { withAuth0 } from "@auth0/auth0-react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 import Profilemenu from "./Profilemenu";
+import Dogs from "../assets/dogs.png";
+import "../Profile.css";
 class Profile extends Component {
   render() {
     const { user, isAuthenticated } = this.props.auth0;
 
     return (
-      <div style={{ background: "#d5f5e9" }}>
+      <div>
         {isAuthenticated && (
           <>
-            <div
-              style={{ width: "100%", float: "right", position: "relative" }}
-            >
-              <img
-                style={{ width: "100%" }}
-                src="https://lostpawsrescueoftexas.org/wp-content/uploads/2019/09/Lost-Paws-Rescue-of-Texas-100-Dog-and-Cat-Adoptions-Each-Year-1024x512.jpg"
-                alt="image"
-              />
+            <div style={{ width: "50%", float: "right", position: "relative" }}>
+              <img style={{ width: "100%" }} src={Dogs} alt="image" />
+              <div
+                style={{
+                  position: "absolute",
+                  width: "60%",
+                  left: "-480px",
+                  top: "190px",
+                }}
+                class="box"
+              ></div>
               <div
                 style={{
                   position: "absolute",
                   width: "100%",
-                  textAlign: "center",
-                  top: "480px",
+                  left: "-460px",
+                  top: "190px",
                 }}
               >
+                <br />
+
                 <img
-                  style={{ width: "20%" }}
+                  style={{ width: "15%" }}
                   src={user && user.picture}
                   alt="Profile"
                   className="rounded-circle img-fluid profile-picture mb-3 mb-md-0"
                 />
                 <br />
-                <h2>{user.name} </h2>
+                <h2 style={{ fontFamily: "serif", fontWeight: "bolder" }}>
+                  {user.name}{" "}
+                </h2>
                 <br />
-                <h3>{user.email}</h3>
+                <h3 style={{ fontFamily: "serif", fontWeight: "bolder" }}>
+                  {user.email}
+                </h3>
+                {/* <Card style={{ width: '20rem' }}>
+                  <Card.Img variant="top" src={user && user.picture} alt="profile" style={{ width: "30%", marginLeft: '106px',borderRadius:'20%' }} />
+                  <Card.Body>
+                    <Card.Title>{user.name}
+                    </Card.Title>
+                    <Card.Text>
+                      {user.email}
+                    </Card.Text>
+                    {/* <Button variant="primary">Go somewhere</Button> */}
+                {/* </Card.Body>
+                </Card> */}
               </div>
 
               <div
                 style={{
                   width: "30%",
-                  top: "65%",
+                  top: "0",
                   position: "absolute",
-                  left: "0",
+                  left: "-800px",
+                  height: "100%",
+                  paddingTop: "4%",
+                  zIndex: "-1",
+                  fontFamily: "serif",
                 }}
               >
                 {isAuthenticated && (
