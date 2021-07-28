@@ -30,7 +30,7 @@ export class AdoptCard extends Component {
       message: e.target.message.value,
     };
     axios
-      .post("http://localhost:3002/addmessage", messageObj)
+      .post(`${process.env.REACT_APP_Host}/addmessage`, messageObj)
       .then((resultData) => {
         console.log(resultData[0]);
       });

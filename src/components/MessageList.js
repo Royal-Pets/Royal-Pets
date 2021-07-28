@@ -20,7 +20,9 @@ export class MessageList extends Component {
 
   componentDidMount() {
     axios
-      .get(`https://royal-pets.herokuapp.com/messages?email=${this.props.auth.user.email}`)
+      .get(
+        `${process.env.REACT_APP_HOST}/messages?email=${this.props.auth.user.email}`
+      )
       .then((resultData) => {
         console.log(resultData.data);
         this.setState({

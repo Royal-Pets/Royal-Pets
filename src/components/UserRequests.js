@@ -33,7 +33,7 @@ export class UserRequests extends Component {
     };
     console.log(adoptObj);
     axios
-      .post("https://royal-pets.herokuapp.com/addAdopt", adoptObj)
+      .post(`${process.env.REACT_APP_HOST}/addAdopt`, adoptObj)
       .then((resultData) => {
         this.setState({
           requests: resultData.data.map((req) => (
@@ -46,7 +46,7 @@ export class UserRequests extends Component {
   renderCards = () => {
     axios
       .get(
-        `https://royal-pets.herokuapp.com/userAdoptList?email=${this.props.auth.user.email}`
+        `${process.env.REACT_APP_HOST}/userAdoptList?email=${this.props.auth.user.email}`
       )
       .then((resultData) => {
         console.log(resultData.data);

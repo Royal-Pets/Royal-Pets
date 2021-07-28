@@ -17,124 +17,54 @@ class Profilemenu extends React.Component {
   handleShow = () => this.setState({ show: true });
   render() {
     return (
-      // <>
-      //   {/* <OffcanvasMenu
-      //     menu={[
-      //       { text: "Home", link: "/" },
-      //       {
-      //         text: "Pages",
-      //         link: "/page",
-      //         submenu: [
-      //           { text: "Page 1", link: "/page/1" },
-      //           { text: "Page 2", link: "/page/2" },
-      //         ],
-      //       },
-      //       { text: "Contact", link: "/contact" },
-      //     ]}
-      //   /> */}
-      //   {/* <Button variant="primary" onClick={this.handleShow}>
-      //     Launch
-      //   </Button>
+      <div style={{ margin: "110px", textAlign: "center", zIndex: "99" }}>
+        <div className="checkAllAdoptablesContainer">
+          <button
+            style={{
+              display: "block",
+              margin: "20px",
+              width: "100%",
+            }}
+            className="float-end checkAllAdoptables"
+            variant="link"
+            onClick={this.props.showrequest}
+          >
+            Requests
+          </button>
+        </div>
 
-      //   <Offcanvas show={this.state.show} onHide={this.handleClose}>
-      //     <Offcanvas.Header closeButton>
-      //       <Offcanvas.Title>Offcanvas</Offcanvas.Title>
-      //     </Offcanvas.Header>
-      //     <Offcanvas.Body>
-      //       <Nav
-      //         style={{ fontSize: "34px" }}
-      //         defaultActiveKey="/home"
-      //         className="flex-column"
-      //       >
-      //         <Nav.Link href="/home">Active</Nav.Link>
-      //         <Nav.Link eventKey="link-1">Link</Nav.Link>
-      //         <Nav.Link eventKey="link-2">Link</Nav.Link>
-      //         <Nav.Link eventKey="disabled" disabled>
-      //           Disabled
-      //         </Nav.Link>
-      //       </Nav>
-      //     </Offcanvas.Body>
-      //   </Offcanvas> */}
-      // </>
-      // <div style={{ margin: "25px", textAlign: "center" }}>
-      //   <Button
-      //     style={{ display: "block", margin: "20px", width: "100%" }}
-      //     onClick={this.props.requestFunc}
-      //     variant="primary"
-      //   >
-      //     request
-      //   </Button>
+        <div className="checkAllAdoptablesContainer">
+          <button
+            style={{
+              display: "block",
+              margin: "20px",
+              width: "100%",
+            }}
+            className="float-end checkAllAdoptables"
+            variant="link"
+            onClick={this.props.showmessages}
+          >
+            Messages
+          </button>
+        </div>
 
-      //   <Button
-      //     style={{ display: "block", margin: "20px", width: "100%" }}
-      //     onClick={this.props.somthingFunc}
-      //     variant="success"
-      //   >
-      //     somthing
-      //   </Button>
-
-      //   <Button
-      //     style={{ display: "block", margin: "20px", width: "100%" }}
-      //     onClick={this.props.showanotherpage}
-      //     variant="warning"
-      //   >
-      //     anotherpage
-      //   </Button>
-      // </div>
-      <div style={{ margin: "25px", textAlign: "center", zIndex: "99" }}>
-        <Button
-          style={{
-            display: "block",
-            margin: "20px",
-            width: "100%",
-            textDecoration: "none",
-            color: "gray",
-            fontSize: "20px",
-            border: "1px solid black",
-            backgroundColor: "#fbeaf7",
-          }}
-          onClick={this.props.showrequest}
-          variant="link"
-        >
-          Requests
-        </Button>
-
-        <Button
-          style={{
-            display: "block",
-            margin: "20px",
-            width: "100%",
-            textDecoration: "none",
-            color: "gray",
-            fontSize: "20px",
-            border: "1px solid black",
-            backgroundColor: "#fbeaf7",
-          }}
-          onClick={this.props.showmessages}
-          variant="link"
-        >
-          Messages
-        </Button>
-
-        <Button
-          style={{
-            display: "block",
-            margin: "20px",
-            width: "100%",
-            textDecoration: "none",
-            color: "gray",
-            fontSize: "20px",
-            border: "1px solid black",
-            backgroundColor: "#fbeaf7",
-          }}
-          onClick={() => {
-            const logout = this.props.auth0.logout;
-            logout({ returnTo: window.location.origin });
-          }}
-          variant="link"
-        >
-          Logout
-        </Button>
+        <div className="checkAllAdoptablesContainer">
+          <button
+            style={{
+              display: "block",
+              margin: "20px",
+              width: "100%",
+            }}
+            className="float-end checkAllAdoptables"
+            variant="link"
+            onClick={() => {
+              const logout = this.props.auth0.logout;
+              logout({ returnTo: window.location.origin });
+            }}
+          >
+            Logout
+          </button>
+        </div>
       </div>
     );
   }
