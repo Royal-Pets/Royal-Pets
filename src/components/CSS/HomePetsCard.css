@@ -111,10 +111,10 @@
 
 }
 .checkAllAdoptablesContainer {
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
 
   position: relative;
-  bottom: 4rem;
+  bottom: 0rem;
 }
 .checkAllAdoptables {
   background-color: var(--main-color);
@@ -133,4 +133,11 @@
 .checkAllAdoptables:hover {
   background-color: transparent;
   color: var(--main-text-color);
+}
+.h2OfAdopteesContainer {
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+
+  margin-bottom: 2rem;
 }
