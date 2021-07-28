@@ -1,6 +1,5 @@
 import "./App.css";
 import React, { Component } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { withAuth0 } from "@auth0/auth0-react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -14,7 +13,7 @@ import LogoutButton from "./components/LogoutButton";
 import LoginButton from "./components/LoginButton";
 import "./index.css";
 import "./components/Header.css";
-import Logo from "./Images/image.png";
+import Logo from "./Images/logo_purple.png";
 
 class App extends React.Component {
   constructor(props) {
@@ -53,70 +52,43 @@ class App extends React.Component {
             className="navbar-header"
             id="mynav"
             style={{
-              backgroundColor:
-                this.state.status === "top"
-                  ? "rgba(0, 0, 0, 0.0)"
-                  : "rgba(0, 0, 0, 1)",
-              boxShadow:
-                this.state.status === "top"
-                  ? "0 8px 8px rgba(0, 0, 0, 0)"
-                  : "0 8px 8px rgba(0, 0, 0, 0.308)",
-              transition: "1s",
+              backgroundColor: "var(--main-background-color)",
+              boxShadow: this.state.status === "top" ? "0 8px 8px rgba(0, 0, 0, 0)" : "0 4px 4px rgba(0, 0, 0, 0.308)",
+              transition: "1s", zIndex: "500000",
             }}
           >
-            <Container>
+            <Container className="headerContainer" >
               <Navbar.Brand href="/">
                 <div className="logo">
-                  <Link
-                    style={{ textDecoration: "none", color: "unset" }}
-                    to="/"
-                  >
-                    <img
-                      src={Logo}
-                      style={{ width: "17rem", height: "4rem" }}
-                    />
+                  <Link to="/">
+                    <img src={Logo} style={{ height: "45px", objectFit: "cover" }} />
                   </Link>
                 </div>
               </Navbar.Brand>
               <Nav className="me-auto">
                 <Nav.Link>
-                  <Link
-                    style={{ textDecoration: "none", color: "unset" }}
-                    to="/"
-                  >
+                  <Link to="/">
                     Home
                   </Link>
                 </Nav.Link>
                 <Nav.Link>
-                  <Link
-                    style={{ textDecoration: "none", color: "unset" }}
-                    to="/store"
-                  >
+                  <Link to="/store">
                     Store
                   </Link>
                 </Nav.Link>
                 <Nav.Link>
-                  <Link
-                    style={{ textDecoration: "none", color: "unset" }}
-                    to="/adopt"
-                  >
+                  <Link to="/adopt">
                     Adopt
                   </Link>
                 </Nav.Link>
                 <Nav.Link>
-                  <Link
-                    style={{ textDecoration: "none", color: "unset" }}
-                    to="/about"
-                  >
+                  <Link to="/about">
                     About Us
                   </Link>
                 </Nav.Link>
                 {this.props.auth0.isAuthenticated ? (
                   <Nav.Link>
-                    <Link
-                      style={{ textDecoration: "none", color: "unset" }}
-                      to="/profile"
-                    >
+                    <Link to="/profile">
                       Profile
                     </Link>
                   </Nav.Link>
@@ -126,6 +98,7 @@ class App extends React.Component {
               {this.props.auth0.isAuthenticated ? null : <LoginButton />}
             </Container>
           </Navbar>
+          <div className="divider"></div>
           {/* A <Switch> looks through its children <Route>s and
                 renders the first one that matches the current URL. */}
           <Switch>
@@ -146,6 +119,7 @@ class App extends React.Component {
             </Route>
           </Switch>
         </Router>
+        
         <Footer />
       </div>
       //       <div>

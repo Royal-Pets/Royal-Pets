@@ -1,6 +1,7 @@
 import React from "react";
-import { Card, Button, Row } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import "./CSS/HomePetsCard.css";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 class HomePetsCard extends React.Component {
   constructor(props) {
@@ -12,27 +13,37 @@ class HomePetsCard extends React.Component {
   render() {
     return (
       <>
-      <div className="ourAdopteesContainer">
-        <h2 className="m-3">Searching for a home</h2>
-        <div className="ourAdoptees">
-          {this.props.petsData.map((ele, idx) => {
-            return (
-              <Card>
-                <div className="cardBodyAndShadow"></div>
-                <Card.Img variant="top" src={ele.image} height="180" style={{ width: "auto", margin: "1rem", borderRadius: "16px", objectFit: "cover" }} />
-                <Card.Body className="d-flex flex-column">
-                  <Card.Title>{ele.title}</Card.Title>
-                  <Card.Text>{ele.text}</Card.Text>
-                  <div className="ButtonContainer mt-auto"><Button style={{borderRadius: "16px" }} variant="primary">
-                    Contact my owner
-                  </Button></div>
-                  
-                </Card.Body>
-              </Card>
-            );
-          })}
-        </div>
-        <Button className="float-end" style={{fontSize:"24px",borderRadius: "24px"}}>CHECK ALL OF OUR ADOPTABLES</Button>
+        <div className="ourAdopteesContainer">
+          <h2 className="m-3">Searching for a home</h2>
+          <div className="ourAdoptees">
+            {this.props.petsData.map((ele, idx) => {
+              return (
+                <Card>
+                  <div className="cardBodyAndShadow"></div>
+                  <Card.Img variant="top" src={ele.image} height="180" style={{ width: "auto", margin: "1rem", borderRadius: "16px", objectFit: "cover" }} />
+                  <Card.Body className="d-flex flex-column">
+                    <Card.Title className="titleAndAge">
+                      <div>{ele.title}</div>
+                      <div>{ele.age}</div>
+                    </Card.Title>
+                    <Card.Text>{ele.text}</Card.Text>
+                    
+                      <div className="mt-auto ButtonContainer">
+                      <Link to={ele.destination}>
+                        <button>{ele.buyText}</button>
+                        </Link>
+                      </div>
+                  </Card.Body>
+                </Card>
+              );
+            })}
+          </div>
+          <Link to="/adopt">
+            <div className="checkAllAdoptablesContainer">
+              <button className="float-end checkAllAdoptables">CHECK OUT MORE</button>
+            </div>
+          </Link>
+          <br style={{ clear: "both" }} />
         </div>
       </>
     );

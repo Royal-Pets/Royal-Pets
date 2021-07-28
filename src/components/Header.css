@@ -1,24 +1,24 @@
 .login-btn,
 .logout-btn {
-  color: #fff;
+  color: var(--main-text-color);
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0);
-  margin-top: -6px;
-  right: 1rem;
-  position: absolute;
-  text-shadow: 0 0 6px black, 0 0 8px black, 0 0 2px rgb(0, 0, 0);
+  /* margin-top: -6px; */
+
   font-weight: 600;
-  border: none;
-  font-size: 30px;
-  margin-right: 50px;
+  font-size: 1.5rem;
+
+  border: 3px solid var(--main-color);
+  border-radius: 25px;
+  padding: 0.2rem 2.5rem;
+
+  transition: 0.3s;
 }
 
 .login-btn:hover,
 .logout-btn:hover {
-  color: rgb(0, 0, 0);
-  background-color: rgba(241, 237, 239, 0.26);
-  text-shadow: 0 0 4px rgb(255, 255, 255);
-  font-weight: 600;
+  color: var(--main-text-color-sub1);
+  background-color: var(--main-color-sub1);
 }
 
 .login-btn svg,
@@ -31,8 +31,63 @@
 .navbar-nav {
   margin-left: 180px;
   color: rgb(0, 0, 0);
+
+  ;
+}
+.navbar-nav :first-child {
+  margin-left: 0;
 }
 .nav-link {
   margin-left: 60px;
-  font-size: 30px;
+  font-size: 15px;
+  
 }
+.nav-link a {
+  text-decoration: none;
+  color: black;
+
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.headerContainer {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+.navbar-nav > a > a {
+  position: relative;
+}
+.navbar-nav > a > a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: -10px;
+  content: "";
+  display: block;
+  height: 3pt;
+  left: 50%;
+  position: absolute;
+  background: var(--main-color);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+  
+}
+.navbar-nav > a:hover > a:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+/* #activePage:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2.3pt;
+  left: 50%;
+  position: absolute;
+  background: var(--mainColor);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 100%; 
+  left: 0; 
+  border-radius: 50px;
+} */

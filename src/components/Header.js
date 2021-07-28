@@ -17,7 +17,7 @@ export class Header extends React.Component {
     return (
       <div>
         <Router>
-          <Navbar bg="dark" variant="dark">
+          <Navbar>
             <Container>
               <Navbar.Brand href="/">Royal Pets</Navbar.Brand>
               <Nav className="me-auto">

@@ -49,22 +49,11 @@
 
   width: 0;
 }
-.newsSection {
-  display:flex;
-  justify-content:space-between;
 
-  /* width: calc(100% - 1.5rem); */
-  margin-left: auto;
-  margin-right: auto;
-}
-.newsSection a > span {
-  color: var(--main-color);
-  border-bottom: var(--main-color) dotted thin;
-}
 .homeAboutUs {
   display: flex;
   gap: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 7rem;
 }
 .homeAboutUs> img {
   max-width: 60%;
@@ -79,6 +68,15 @@
 .homeAboutUsText > h2 {
   margin-bottom: 2rem;
 }
+.aboutUsButton > span { 
+  position: relative;
+  left: 0;
+
+  transition: var(--transition1);
+}
+.aboutUsButton:hover > span {
+  left: 1rem;
+}
 .playIcon{ 
   position:absolute;
   left: 50%;
@@ -91,22 +89,29 @@
   justify-content: space-between;
   flex-wrap: wrap;
 
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
 }
 .ourPros > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
 
+
+  text-align: center;
 }
 .ourPros img {
-height: 15rem;
-width: 15rem;
-object-fit: cover;
+width: 12rem;
+
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 2rem;
+
+/* filter: saturate(150%); */
+/* object-fit: cover; */
+
 }
 .ourPros p {
   width: 15rem;
-  height: 15rem;
 
   overflow: auto;
 }

@@ -5,24 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-.footerCSS{
-  width: 100%;
-  position: relative;
-  bottom: 0%;
-}
-.footerCSS ul{
-  list-style:none;
-  display: inline-flex;
-
-}
-.footerCSS ul li {
-  color: blanchedalmond;
-  margin: 15px;
 }
