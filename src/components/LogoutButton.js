@@ -6,9 +6,9 @@ function LogoutButton() {
     logout,
   } = useAuth0();
   return isAuthenticated && (
-    <button onClick={() => {
+    <button className='logout-btn' onClick={() => {
       logout({ returnTo: window.location.origin });
-    }}>Log out</button>
+    }}>Logout</button>
   );
 }
 export default LogoutButton;
