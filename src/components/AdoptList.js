@@ -36,7 +36,7 @@ export class AdoptList extends Component {
     };
     console.log(adoptObj);
     axios
-      .post("https://royal-pets.herokuapp.com/addAdopt", adoptObj)
+      .post(`${process.env.REACT_APP_HOST}/addAdopt`, adoptObj)
       .then((resultData) => {
         this.setState({
           requests: resultData.data.map((req) => <AdoptCard req={req} />),
@@ -45,7 +45,7 @@ export class AdoptList extends Component {
   };
   componentDidMount() {
     axios
-      .get("https://royal-pets.herokuapp.com/adoptList")
+      .get(`${process.env.REACT_APP_HOST}/adoptList`)
       .then((resultData) => {
         console.log(resultData.data);
         this.setState({
@@ -60,18 +60,20 @@ export class AdoptList extends Component {
   render() {
     return (
       <>
-        <Button
-          variant="secondary"
-          onClick={this.handleShow}
-          style={{
-            display: "block",
-            padding: "5px 50px",
-            margin: "20px",
-            float: "right",
-          }}
-        >
-          Add
-        </Button>
+        {this.props.auth0.isAuthenticated && (
+          <Button
+            variant="secondary"
+            onClick={this.handleShow}
+            style={{
+              display: "block",
+              padding: "5px 50px",
+              margin: "20px",
+              float: "right",
+            }}
+          >
+            Add
+          </Button>
+        )}
         <br style={{ clear: "both" }} />
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>

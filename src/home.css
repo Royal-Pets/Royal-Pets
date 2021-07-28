@@ -3,7 +3,6 @@
   margin-right: 10%;
 }
 
-
 .slide-show {
   padding-left: 0;
   padding-right: 0;
@@ -13,7 +12,7 @@
   object-fit: cover;
 }
 .carousel-caption {
-  left:unset;
+  left: unset;
   right: 10%;
   bottom: unset;
   top: 50%;
@@ -31,7 +30,7 @@
   border-radius: 50px;
 
   border-top: 0;
-  border-bottom: 0;  
+  border-bottom: 0;
 
   margin-left: 7px;
   margin-right: 7px;
@@ -54,8 +53,10 @@
   display: flex;
   gap: 3rem;
   margin-bottom: 7rem;
+  background-color: rgba(171, 82, 231, 0.28);
+  padding: 20px;
 }
-.homeAboutUs> img {
+.homeAboutUs > img {
   max-width: 60%;
 }
 .homeAboutUsText {
@@ -68,21 +69,20 @@
 .homeAboutUsText > h2 {
   margin-bottom: 2rem;
 }
-.aboutUsButton > span { 
+.aboutUsButton > span {
   position: relative;
   left: 0;
-
+  color: rgb(102, 0, 170) !important;
   transition: var(--transition1);
 }
 .aboutUsButton:hover > span {
   left: 1rem;
 }
-.playIcon{ 
-  position:absolute;
+.playIcon {
+  position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  
 }
 .ourPros {
   display: flex;
@@ -96,19 +96,17 @@
   flex-direction: column;
   justify-content: center;
 
-
   text-align: center;
 }
 .ourPros img {
-width: 12rem;
+  width: 12rem;
 
-margin-left: auto;
-margin-right: auto;
-margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
 
-/* filter: saturate(150%); */
-/* object-fit: cover; */
-
+  /* filter: saturate(150%); */
+  /* object-fit: cover; */
 }
 .ourPros p {
   width: 15rem;

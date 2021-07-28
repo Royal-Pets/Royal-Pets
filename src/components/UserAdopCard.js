@@ -16,7 +16,7 @@ export class UserAdopCard extends Component {
   removeCard = () => {
     //remove
     axios
-      .delete("https://royal-pets.herokuapp.com/removeAdopt", this.props.req)
+      .delete(`${process.env.REACT_APP_HOST}/removeAdopt`, this.props.req)
       .then((resultData) => {
         this.props.renderCards();
       });

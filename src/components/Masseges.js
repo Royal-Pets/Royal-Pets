@@ -21,7 +21,16 @@ export class Masseges extends Component {
   render() {
     return (
       <>
-        <Card style={{ margin: "35px auto", width: "50%" }}>
+        <Card
+          style={{
+            margin: "35px auto",
+            width: "35%",
+            background: "rgba(255, 255, 255, 0.3)",
+            border: "1px solid black",
+            borderRadius: "50px",
+            padding: "20px",
+          }}
+        >
           <Card.Body>
             <Card.Title>From: {this.props.message.sender}</Card.Title>
             <Card.Title>To: {this.props.message.receiver}</Card.Title>
