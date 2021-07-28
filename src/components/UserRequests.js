@@ -33,7 +33,7 @@ export class UserRequests extends Component {
     };
     console.log(adoptObj);
     axios
-      .post("http://localhost:3002/addAdopt", adoptObj)
+      .post("https://royal-pets.herokuapp.com/addAdopt", adoptObj)
       .then((resultData) => {
         this.setState({
           requests: resultData.data.map((req) => <UserAdopCard req={req} />),
@@ -43,7 +43,7 @@ export class UserRequests extends Component {
   componentDidMount() {
     axios
       .get(
-        `http://localhost:3002/userAdoptList?email=${this.props.auth.user.email}`
+        `https://royal-pets.herokuapp.com/userAdoptList?email=${this.props.auth.user.email}`
       )
       .then((resultData) => {
         console.log(resultData.data);

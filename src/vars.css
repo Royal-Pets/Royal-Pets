@@ -1,5 +1,14 @@
 :root {
-  --main-color: rgb(26, 207, 192);
+  --main-color: rgb(172, 82, 231);
+  --main-color-sub1: rgb(201, 160, 247);
+
+
   --secondary-color: rgb(207, 26, 101);
   --transition1: 0.3s cubic-bezier(.78,.12,.49,.93);
+
+  --main-text-color: rgba(0, 0, 0, 0.89);
+  --main-text-color-sub1: rgba(255, 255, 255, 0.89);
+  --main-background-color-alt: rgba(255, 255, 255, 0.89);
+  --main-background-color: #eee;
+  
 }

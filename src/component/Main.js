@@ -21,19 +21,7 @@ class Main extends React.Component {
   componentDidMount() {
     this.setState({
       products: products.map((p) => {
-        return (
-          <Product
-            productName={p.productName}
-            itsFor={p.itsFor}
-            Price={p.Price}
-            image={p.image}
-            addtoCart={this.onclickCart}
-            cartProduct={this.state.cartProduct}
-            removeItem={this.removeProduct}
-            index={this.state.index}
-            clearCart={this.clearCart}
-          />
-        );
+        return <Product productName={p.productName} itsFor={p.itsFor} Price={p.Price} image={p.image} addtoCart={this.onclickCart} cartProduct={this.state.cartProduct} removeItem={this.removeProduct} index={this.state.index} clearCart={this.clearCart} />;
       }),
     });
   }
@@ -53,19 +41,7 @@ class Main extends React.Component {
           }
         })
         .map((p) => {
-          return (
-            <Product
-              productName={p.productName}
-              itsFor={p.itsFor}
-              Price={p.Price}
-              image={p.image}
-              addtoCart={this.onclickCart}
-              cartProduct={this.state.cartProduct}
-              removeItem={this.removeProduct}
-              index={this.state.index}
-              clearCart={this.clearCart}
-            />
-          );
+          return <Product productName={p.productName} itsFor={p.itsFor} Price={p.Price} image={p.image} addtoCart={this.onclickCart} cartProduct={this.state.cartProduct} removeItem={this.removeProduct} index={this.state.index} clearCart={this.clearCart} />;
         }),
     });
 
@@ -98,9 +74,9 @@ class Main extends React.Component {
 
     return (
       <>
-        <div>
+        <div className="productPage">
           <FilterProduct submitForm={this.submitForm} />
-          {this.state.products}
+          <div className="storeProductsContainer">{this.state.products}</div>
         </div>
       </>
     );

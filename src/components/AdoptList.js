@@ -36,7 +36,7 @@ export class AdoptList extends Component {
     };
     console.log(adoptObj);
     axios
-      .post("http://localhost:3002/addAdopt", adoptObj)
+      .post("https://royal-pets.herokuapp.com/addAdopt", adoptObj)
       .then((resultData) => {
         this.setState({
           requests: resultData.data.map((req) => <AdoptCard req={req} />),
@@ -45,7 +45,7 @@ export class AdoptList extends Component {
   };
   componentDidMount() {
     axios
-      .get("http://localhost:3002/adoptList")
+      .get("https://royal-pets.herokuapp.com/adoptList")
       .then((resultData) => {
         console.log(resultData.data);
         this.setState({

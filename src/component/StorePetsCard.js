@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import "./CSS/HomePetsCard.css";
+import "./StorePetsCard.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 class HomePetsCard extends React.Component {
