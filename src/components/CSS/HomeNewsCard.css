@@ -36,3 +36,10 @@
 .newsSectionCard:hover span {
   bottom: 0%;
 }
+.newsSectionContainer {
+  width: 100%;
+  height: 22rem;
+  overflow: hidden;
+
+  margin-bottom: 2rem;
+}

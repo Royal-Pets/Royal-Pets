@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { withAuth0 } from "@auth0/auth0-react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 import Profilemenu from "./Profilemenu";
 import Dogs from "../assets/dogs.png";
 import "../Profile.css";
