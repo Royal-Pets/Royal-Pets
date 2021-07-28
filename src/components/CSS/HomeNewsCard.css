@@ -1,0 +1,14 @@
+.newsSectionCard img {
+  transition: 0.8s;
+}
+.newsSectionCard:hover img {
+  transform: scale(1.1);
+}
+.newsSectionCard span {
+  position: relative;
+  bottom: 105%;
+  transition: 0.3s;
+}
+.newsSectionCard:hover span {
+  bottom: 0%;
+}

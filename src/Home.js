@@ -3,11 +3,16 @@ import { Container, Row, Carousel, Modal, Button, Card } from "react-bootstrap";
 import img1 from "./Images/1536x600 cat looking to the side.jpg";
 import img2 from "./Images/1536x600 rabbit looking at viewer.jpg";
 import img3 from "./Images/1536x600 guinea pigs1.jpg";
-import imgCard from "./Images/cardimage1.jpg";
+import imgCard from "./Images/black cat looking at viewer.webp";
 import imgCard2 from "./Images/cardimage2.jpg";
 import imgCard3 from "./Images/cardimage3.jpg";
 import imgCard4 from "./Images/cardimage4.jpg";
 import imgCard5 from "./Images/41217047470_45aa7a4651_k.jpg";
+
+import newsImgCard1 from "./Images/black cat looking at viewer.webp";
+import newsImgCard2 from "./Images/cat-ham.jpg";
+import newsImgCard3 from "./Images/kitten cam.jpg";
+import newsImgCard4 from "./Images/small rabbit.jpg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
@@ -16,7 +21,7 @@ import "./home.css";
 import { Link } from "react-router-dom";
 
 import HomePetsCard from "./components/HomePetsCard";
-
+import HomeNewsCard from "./components/HomeNewsCard";
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -25,8 +30,8 @@ class Home extends Component {
       petsData: [
         {
           image: imgCard,
-          title: "Island wide Delivery",
-          text: "We cover all cities in Jordan",
+          title: "Tom",
+          text: "Happy to live in a new home, very good with other cats",
         },
         {
           image: imgCard4,
@@ -42,6 +47,24 @@ class Home extends Component {
           image: imgCard2,
           title: "24/7 Support",
           text: "Dedicated support",
+        },
+      ],
+      newsData: [
+        {
+          image: newsImgCard1,
+          desc: "Five kittens all adopted at once, no one gets left behind in our team",
+        },
+        {
+          image: newsImgCard2,
+          desc: "What Happens Now? Preparing Your Pet for Life After COVID-19",
+        },
+        {
+          image: newsImgCard3,
+          desc: "OUR VIRTUAL KITTEN SHOWER IS LIVE!",
+        },
+        {
+          image: newsImgCard4,
+          desc: "Pet of the Week: Wanda the rabbit",
         },
       ],
     };
@@ -80,51 +103,56 @@ class Home extends Component {
           </Carousel>
         </Row>
         <div className="homeMainBody">
-          <Row className="mb-5 newSection">
-            <Card style={{ width: "18rem" }}>
-              <Card.Body>
-                <Card.Img variant="top" src={imgCard} height="180" />
-                <Card.Title>Timmy</Card.Title>
-                <Card.Text>Our newest cat, Timmy! in need for a....</Card.Text>
-                <Link to="/adopt">
-                  <Button variant="primary">Our adoption page</Button>
-                </Link>
-              </Card.Body>
-            </Card>
 
-            <Card style={{ width: "18rem" }}>
-              <Card.Body>
-                <Card.Img variant="top" src={imgCard} height="180" />
-                <Card.Title>Timmy</Card.Title>
-                <Card.Text>Our newest cat, Timmy! in need for a....</Card.Text>
-                <Link to="/adopt">
-                  <Button variant="primary">Our adoption page</Button>
-                </Link>
-              </Card.Body>
-            </Card>
 
-            <Card style={{ width: "18rem" }}>
-              <Card.Body>
-                <Card.Img variant="top" src={imgCard} height="180" />
-                <Card.Title>Timmy</Card.Title>
-                <Card.Text>Our newest cat, Timmy! in need for a....</Card.Text>
-                <Link to="/adopt">
-                  <Button variant="primary">Our adoption page</Button>
-                </Link>
-              </Card.Body>
-            </Card>
+          <HomeNewsCard newsData={this.state.newsData} />
 
-            <Card style={{ width: "18rem" }}>
-              <Card.Body>
-                <Card.Img variant="top" src={imgCard} height="180" />
-                <Card.Title>Timmy</Card.Title>
-                <Card.Text>Our newest cat, Timmy! in need for a....</Card.Text>
-                <Link to="/adopt">
-                  <Button variant="primary">Our adoption page</Button>
-                </Link>
-              </Card.Body>
-            </Card>
-          </Row>
+//           <Row className="mb-5 newSection">
+//             <Card style={{ width: "18rem" }}>
+//               <Card.Body>
+//                 <Card.Img variant="top" src={imgCard} height="180" />
+//                 <Card.Title>Timmy</Card.Title>
+//                 <Card.Text>Our newest cat, Timmy! in need for a....</Card.Text>
+//                 <Link to="/adopt">
+//                   <Button variant="primary">Our adoption page</Button>
+//                 </Link>
+//               </Card.Body>
+//             </Card>
+
+//             <Card style={{ width: "18rem" }}>
+//               <Card.Body>
+//                 <Card.Img variant="top" src={imgCard} height="180" />
+//                 <Card.Title>Timmy</Card.Title>
+//                 <Card.Text>Our newest cat, Timmy! in need for a....</Card.Text>
+//                 <Link to="/adopt">
+//                   <Button variant="primary">Our adoption page</Button>
+//                 </Link>
+//               </Card.Body>
+//             </Card>
+
+//             <Card style={{ width: "18rem" }}>
+//               <Card.Body>
+//                 <Card.Img variant="top" src={imgCard} height="180" />
+//                 <Card.Title>Timmy</Card.Title>
+//                 <Card.Text>Our newest cat, Timmy! in need for a....</Card.Text>
+//                 <Link to="/adopt">
+//                   <Button variant="primary">Our adoption page</Button>
+//                 </Link>
+//               </Card.Body>
+//             </Card>
+
+//             <Card style={{ width: "18rem" }}>
+//               <Card.Body>
+//                 <Card.Img variant="top" src={imgCard} height="180" />
+//                 <Card.Title>Timmy</Card.Title>
+//                 <Card.Text>Our newest cat, Timmy! in need for a....</Card.Text>
+//                 <Link to="/adopt">
+//                   <Button variant="primary">Our adoption page</Button>
+//                 </Link>
+//               </Card.Body>
+//             </Card>
+//           </Row>
+
 
           <div className="homeAboutUs">
             <img src={imgCard5} />
