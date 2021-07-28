@@ -19,7 +19,8 @@
   border: unset;
 }
 
-.ourAdoptees .card-body > p, .ourAdoptees .card-body > div:first-of-type  {
+.ourAdoptees .card-body > p,
+.ourAdoptees .card-body > div:first-of-type {
   position: relative;
   top: 0.7rem;
   left: 1rem;
@@ -28,7 +29,8 @@
   padding-right: 1.3rem;
   transition: var(--transition1);
 }
-.ourAdoptees .card:hover .card-body > p,.ourAdoptees .card:hover .card-body > div:first-of-type {
+.ourAdoptees .card:hover .card-body > p,
+.ourAdoptees .card:hover .card-body > div:first-of-type {
   top: -0.5rem;
   left: 0rem;
 }
@@ -44,7 +46,6 @@
 .ourAdoptees .cardBodyAndShadow {
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.301);
 
-
   position: absolute;
   right: 0;
   bottom: 10%;
@@ -57,14 +58,11 @@
   border: unset;
 
   transition: var(--transition1);
-  
 }
 .ourAdoptees .card > img {
   box-shadow: 0.5rem 2rem 0 0 var(--main-color);
   transition: var(--transition1);
-
 }
-
 
 .card:hover > img {
   box-shadow: 0 0 0 0.3rem var(--main-color);
@@ -98,17 +96,15 @@
   transition: var(--transition1);
 }
 .ourAdoptees .ButtonContainer:hover button {
-
   background-color: var(--main-color-sub1);
   color: var(--main-text-color-sub1);
 }
 .ourAdoptees .card:hover button {
   width: 100%;
 
-  left:0;
-  opacity: 100%;
+  left: 0;
+  opacity: 1;
   bottom: 0%;
-
 }
 .checkAllAdoptablesContainer {
   margin-bottom: 5rem;
