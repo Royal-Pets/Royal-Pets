@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, Button, Modal, Form, FloatingLabel } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { withAuth0 } from "@auth0/auth0-react";
 import axios from "axios";
@@ -29,11 +29,14 @@ export class UserAdopCard extends Component {
   render() {
     return (
       <>
-        <div>
+        <div style={{ zIndex: "999" }}>
           <div className="ourAdopteesContainer">
             <div className="ourAdoptees">
               <Card>
-                <div className="cardBodyAndShadow"></div>
+                <div
+                  style={{ background: "#eee" }}
+                  className="cardBodyAndShadow"
+                ></div>
                 <Card.Img
                   variant="top"
                   src={this.props.req.img_url}

@@ -1,6 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from "react-bootstrap/Navbar";
 import { FaFacebookF, FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { withAuth0 } from "@auth0/auth0-react";
 
@@ -46,7 +45,9 @@ export class Footer extends React.Component {
         </div>
 
         <div className="copyrightDivContainer">
-          <div className="copyrightDiv">Copyright &copy; 2021 Poyal Pets - All Rights Reserved</div>
+          <div className="copyrightDiv">
+            Copyright &copy; 2021 Poyal Pets - All Rights Reserved
+          </div>
         </div>
       </footer>
     );
