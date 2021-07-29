@@ -55,8 +55,8 @@ class Home extends Component {
           destination: "/adopt",
         },
         {
-          image: imgCard4,
-          title: "Zara",
+          image: "https://arabiclessonsjordan.files.wordpress.com/2013/12/1426498_506953999420720_2022641063_n.jpg",
+          title: "umZaki",
           text: "A bit old, but happy and playful",
           age: "10 years",
           buyText: "Contact my owner",
@@ -64,7 +64,7 @@ class Home extends Component {
         },
         {
           image: imgCard3,
-          title: "Fulla",
+          title: "folfol",
           text: "New to the world, but still meowing hard!",
           age: "6 months",
           buyText: "Contact my owner",
